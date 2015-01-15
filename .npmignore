@@ -1,0 +1,8 @@
+# node
+node_modules/
+_public/
+test/
+
+# Else
+docs/
+.editorconfig
