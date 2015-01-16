@@ -72,6 +72,6 @@ var Index = React.createClass({
       </div>
     );
   }
-})
+});
 
 React.render(<Index />, document.getElementsByClassName('main')[0]);
