@@ -6,10 +6,10 @@ require('semantic-ui/dist/semantic.js');
 
 var React            = require('react/addons');
 var GitHubForkRibbon = require('react-github-fork-ribbon');
-var Highlight        = require('react-highlight');
+var CodeBlock        = require('./CodeBlock.jsx');
 var Semantify        = require('react-semantify');
 
-var {Header} = Semantify;
+var Header = Semantify.Header;
 
 var Index = React.createClass({
 
@@ -34,11 +34,11 @@ var Index = React.createClass({
 
           <p>Use npm to install.</p>
 
-          <Highlight className="bash">{"$ npm install react-github-fork-ribbon"}</Highlight>
+          <CodeBlock className="bash">{"$ npm install react-github-fork-ribbon"}</CodeBlock>
 
           <Header className="huge dividing">Usage</Header>
 
-          <Highlight language="js">
+          <CodeBlock language="js">
             {["var React = require('react'); ",
              "var GitHubForkRibbon = require('react-github-fork-ribbon'); ",
              "var ForkRibbon = React.createClass({ ",
@@ -58,7 +58,7 @@ var Index = React.createClass({
              "  <ForkRibbon />, ",
              "  document.body ",
              ");"].join('\n')}
-          </Highlight>
+          </CodeBlock>
 
           <p>And then you will see GitHub Fork Ribbon.</p>
 
@@ -74,4 +74,4 @@ var Index = React.createClass({
   }
 })
 
-React.render(<Index />, document.body);
+React.render(<Index />, document.getElementsByClassName('main')[0]);
