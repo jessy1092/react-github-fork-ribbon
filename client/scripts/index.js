@@ -62,7 +62,7 @@ var Index = React.createClass({
 
           <p>And then you will see GitHub Fork Ribbon.</p>
 
-          <p>If you want to know more detail, you can see this website <a href="//github.com/jessy1092/react-semantify/tree/website" target="_blank">
+          <p>If you want to know more detail, you can see this website <a href="//github.com/jessy1092/react-github-fork-ribbon/tree/website" target="_blank">
              source code</a>.</p>
 
           <p>Have a nice Fork!</p>
