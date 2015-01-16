@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - '0.10'
+git:
+  depth: 1
+
+before_script:
+  - chmod +x .travis/after_success.sh
+  - chmod +x ./deploy
+
+branches:
+  except:
+  - gh-pages
+
+after_success: .travis/after_success.sh
+
+env:
+  global:
+    secure: VmFEbsXMz7ATMzFB968VGzgDKcoROW75QMEVvugFPyGmdN2KQwd2q3I1dZp6F062XZONIYvSIYMX69H++iKohKlaQ6jc0WoIf3wxAW6zJRgBBIMrouYwL9kDOnBMsHwuqmswAlQbcNCaS4+9bdE8QspZUgBdb/4Bv8XVhe2YGz4=
