@@ -9,7 +9,7 @@ var GitHubForkRibbon = require('react-github-fork-ribbon');
 var CodeBlock        = require('./CodeBlock.jsx');
 var Semantify        = require('react-semantify');
 
-var Header = Semantify.Header;
+var {Header, List, Item} = Semantify;
 
 var Index = React.createClass({
 
@@ -17,7 +17,15 @@ var Index = React.createClass({
     return (
       <div>
 
-        <GitHubForkRibbon portion="right"
+        <GitHubForkRibbon position="right"
+                          color="green"
+                          href="//github.com/jessy1092/react-github-fork-ribbon"
+                          target="_blank">
+          Fork me on GitHub
+        </GitHubForkRibbon>
+
+        <GitHubForkRibbon position="left-bottom"
+                          color="red"
                           href="//github.com/jessy1092/react-github-fork-ribbon"
                           target="_blank">
           Fork me on GitHub
@@ -46,8 +54,9 @@ var Index = React.createClass({
              "  render: function () { ",
              "    return ( ",
              "      <GitHubForkRibbon position=\"right\" ",
-             "        href=\"//github.com/jessy1092/react-github-fork-ribbon\" ",
-             "        target=\"_blank\" > ",
+             "                        color=\"green\"",
+             "                        href=\"//github.com/jessy1092/react-github-fork-ribbon\" ",
+             "                        target=\"_blank\" > ",
              "        Fork me on GitHub ",
              "      </GitHubForkRibbon> ",
              "    ); ",
@@ -61,6 +70,30 @@ var Index = React.createClass({
           </CodeBlock>
 
           <p>And then you will see GitHub Fork Ribbon.</p>
+
+          <Header className="huge dividing">Properties</Header>
+
+          <Header className="medium">href</Header>
+          <p>{"It would be <a> tag's attribute href"}</p>
+
+          <Header className="medium">target</Header>
+          <p>{"It would be <a> tag's attribute target"}</p>
+
+          <Header className="medium">position</Header>
+          <List className="bulleted">
+            <Item>left</Item>
+            <Item>right</Item>
+            <Item>left-bottom</Item>
+            <Item>right-bottom</Item>
+          </List>
+
+          <Header className="medium">color</Header>
+          <List className="bulleted">
+            <Item>red</Item>
+            <Item>orange</Item>
+            <Item>black</Item>
+            <Item>green</Item>
+          </List>
 
           <p>If you want to know more detail, you can see this website <a href="//github.com/jessy1092/react-github-fork-ribbon/tree/website" target="_blank">
              source code</a>.</p>
