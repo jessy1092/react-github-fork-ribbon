@@ -2,3 +2,4 @@
 node_modules/
 _public/
 *.log
+component/
