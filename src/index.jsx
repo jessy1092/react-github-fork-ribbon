@@ -12,7 +12,7 @@ module.exports = global.GitHubForkRibbon = React.createClass({
 
   render: function () {
 
-    var {position, href, target, ...other} = this.props;
+    var {position, href, target, color, ...other} = this.props;
 
     var ribbonStyle = [GitHubForkRibbon.baseStyle];
     var wrapperStyle = [GitHubForkRibbonWrapper.baseStyle];
@@ -49,6 +49,27 @@ module.exports = global.GitHubForkRibbon = React.createClass({
         wrapperStyle.push(GitHubForkRibbonWrapper.rightStyle);
         position = 'right'
         break;
+    }
+
+    switch(this.props.color){
+      case 'red':
+        ribbonStyle.push(GitHubForkRibbon.redColor);
+        break;
+
+      case 'orange':
+        ribbonStyle.push(GitHubForkRibbon.orangeColor);
+        break;
+
+      case 'black':
+        ribbonStyle.push(GitHubForkRibbon.blackColor);
+        break;
+
+      case 'green':
+        ribbonStyle.push(GitHubForkRibbon.greenColor);
+        break;
+
+      default:
+        ribbonStyle.push(GitHubForkRibbon.redColor);
     }
 
     return (

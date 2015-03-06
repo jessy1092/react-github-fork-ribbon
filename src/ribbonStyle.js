@@ -66,6 +66,22 @@ module.exports = {
       borderColor: 'rgba(255, 255, 255, 0.7)'
     }),
 
+    redColor: ReactStyle({
+      backgroundColor: '#a00',
+    }),
+
+    orangeColor: ReactStyle({
+      backgroundColor: '#f80',
+    }),
+
+    blackColor: ReactStyle({
+      backgroundColor: '#333',
+    }),
+
+    greenColor: ReactStyle({
+      backgroundColor: '#090',
+    }),
+
     leftStyle: ReactStyle({
       top: '42px',
       left: '-43px',
