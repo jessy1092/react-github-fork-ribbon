@@ -42,7 +42,7 @@ module.exports = global.GitHubForkRibbon = React.createClass({
 
     switch (this.props.position) {
 
-      case "left1":
+      case "left":
         ribbonStyle.push(GitHubForkRibbon.leftStyle);
         wrapperStyle.push(GitHubForkRibbonWrapper.leftStyle);
         position = "left";

@@ -52,7 +52,20 @@ It has four positions.
 - `left-bottom`
 - `right-bottom`
 
+### color
+
+It has four color.
+- `red`
+- `orange`
+- `black`
+- `green`
+
 ## Release Notes
+
+### Version 0.2.0 - 2015/03/07
+
+- Add attribute: `color`
+- Transpile into vanilla js during prepublish.
 
 ### Version 0.1.0 - 2015/01/16
 

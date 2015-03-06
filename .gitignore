@@ -1,5 +1,10 @@
 # node
 node_modules/
-_public/
+
 *.log
+
+# transpile file
 component/
+
+# gulpfile is transpile from gulpfile.babel.js
+gulpfile.js
