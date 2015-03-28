@@ -1,83 +1,91 @@
 "use strict";
 
-var RibbonStyle = require('./ribbonStyle.js');
-var React = require('react/addons');
+import RibbonStyle from './ribbonStyle';
+import React from 'react/addons';
 
-var {
+let {
   GitHubForkRibbon,
   GitHubForkRibbonWrapper
 } = RibbonStyle;
 
-module.exports = global.GitHubForkRibbon = React.createClass({
+export default global.GitHubForkRibbon = React.createClass({
 
-  render: function () {
+  _setPositionStyle() {
 
-    var {position, href, target, color, ...other} = this.props;
-
-    var ribbonStyle = [GitHubForkRibbon.baseStyle];
-    var wrapperStyle = [GitHubForkRibbonWrapper.baseStyle];
-    var position = '';
+    this.ribbonStyle = [GitHubForkRibbon.baseStyle];
+    this.wrapperStyle = [GitHubForkRibbonWrapper.baseStyle];
+    this.position = '';
 
     switch(this.props.position) {
 
       case 'left':
-        ribbonStyle.push(GitHubForkRibbon.leftStyle);
-        wrapperStyle.push(GitHubForkRibbonWrapper.leftStyle);
-        position = 'left';
+        this.ribbonStyle.push(GitHubForkRibbon.leftStyle);
+        this.wrapperStyle.push(GitHubForkRibbonWrapper.leftStyle);
+        this.position = 'left';
         break;
 
       case 'right':
-        ribbonStyle.push(GitHubForkRibbon.rightStyle);
-        wrapperStyle.push(GitHubForkRibbonWrapper.rightStyle);
-        position = 'right';
+        this.ribbonStyle.push(GitHubForkRibbon.rightStyle);
+        this.wrapperStyle.push(GitHubForkRibbonWrapper.rightStyle);
+        this.position = 'right';
         break;
 
       case 'left-bottom':
-        ribbonStyle.push(GitHubForkRibbon.leftBottomStyle);
-        wrapperStyle.push(GitHubForkRibbonWrapper.leftBottomStyle);
-        position = 'left-bottom';
+        this.ribbonStyle.push(GitHubForkRibbon.leftBottomStyle);
+        this.wrapperStyle.push(GitHubForkRibbonWrapper.leftBottomStyle);
+        this.position = 'left-bottom';
         break;
 
       case 'right-bottom':
-        ribbonStyle.push(GitHubForkRibbon.rightBottomStyle);
-        wrapperStyle.push(GitHubForkRibbonWrapper.rightBottomStyle);
-        position = 'right-bottom';
+        this.ribbonStyle.push(GitHubForkRibbon.rightBottomStyle);
+        this.wrapperStyle.push(GitHubForkRibbonWrapper.rightBottomStyle);
+        this.position = 'right-bottom';
         break;
 
       default:
-        ribbonStyle.push(GitHubForkRibbon.rightStyle);
-        wrapperStyle.push(GitHubForkRibbonWrapper.rightStyle);
-        position = 'right'
+        this.ribbonStyle.push(GitHubForkRibbon.rightStyle);
+        this.wrapperStyle.push(GitHubForkRibbonWrapper.rightStyle);
+        this.position = 'right'
         break;
     }
+  },
 
+  _setColorStyle() {
     switch(this.props.color){
       case 'red':
-        ribbonStyle.push(GitHubForkRibbon.redColor);
+        this.ribbonStyle.push(GitHubForkRibbon.redColor);
         break;
 
       case 'orange':
-        ribbonStyle.push(GitHubForkRibbon.orangeColor);
+        this.ribbonStyle.push(GitHubForkRibbon.orangeColor);
         break;
 
       case 'black':
-        ribbonStyle.push(GitHubForkRibbon.blackColor);
+        this.ribbonStyle.push(GitHubForkRibbon.blackColor);
         break;
 
       case 'green':
-        ribbonStyle.push(GitHubForkRibbon.greenColor);
+        this.ribbonStyle.push(GitHubForkRibbon.greenColor);
         break;
 
       default:
-        ribbonStyle.push(GitHubForkRibbon.redColor);
+        this.ribbonStyle.push(GitHubForkRibbon.redColor);
     }
+  },
+
+  render() {
+
+    let {position, href, target, color, ...other} = this.props;
+
+    this._setPositionStyle()
+    this._setColorStyle()
 
     return (
       <div {...other}
-           className={"github-fork-ribbon-wrapper " + position}
-           styles={wrapperStyle}>
+           className={"github-fork-ribbon-wrapper " + this.position}
+           styles={this.wrapperStyle}>
         <div className="github-fork-ribbon"
-             styles={ribbonStyle}>
+             styles={this.ribbonStyle}>
           <a href={this.props.href}
              target={this.props.target}
              styles={GitHubForkRibbon.urlStyle}>
@@ -87,4 +95,4 @@ module.exports = global.GitHubForkRibbon = React.createClass({
       </div>
     )
   }
-})
+});

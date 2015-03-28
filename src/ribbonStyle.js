@@ -7,13 +7,13 @@
 
 "use strict";
 
-var ReactStyle = require('react-style');
+import StyleSheet from 'react-style';
 
-module.exports = {
+export default {
 
   GitHubForkRibbon: {
 
-    baseStyle: ReactStyle({
+    baseStyle: StyleSheet.create({
       /* The right and left classes determine the side we attach our banner to */
       position: 'absolute',
 
@@ -43,7 +43,7 @@ module.exports = {
       pointerEvents: 'auto'
     }),
 
-    urlStyle: ReactStyle({
+    urlStyle: StyleSheet.create({
       /* Set the text properties */
       color: '#fff',
       textDecoration: 'none',
@@ -66,23 +66,23 @@ module.exports = {
       borderColor: 'rgba(255, 255, 255, 0.7)'
     }),
 
-    redColor: ReactStyle({
-      backgroundColor: '#a00',
+    redColor: StyleSheet.create({
+      backgroundColor: '#a00'
     }),
 
-    orangeColor: ReactStyle({
-      backgroundColor: '#f80',
+    orangeColor: StyleSheet.create({
+      backgroundColor: '#f80'
     }),
 
-    blackColor: ReactStyle({
-      backgroundColor: '#333',
+    blackColor: StyleSheet.create({
+      backgroundColor: '#333'
     }),
 
-    greenColor: ReactStyle({
-      backgroundColor: '#090',
+    greenColor: StyleSheet.create({
+      backgroundColor: '#090'
     }),
 
-    leftStyle: ReactStyle({
+    leftStyle: StyleSheet.create({
       top: '42px',
       left: '-43px',
 
@@ -93,7 +93,7 @@ module.exports = {
       transform: 'rotate(-45deg)'
     }),
 
-    rightStyle: ReactStyle({
+    rightStyle: StyleSheet.create({
       top: '42px',
       right: '-43px',
 
@@ -104,7 +104,7 @@ module.exports = {
       transform: 'rotate(45deg)'
     }),
 
-    leftBottomStyle: ReactStyle({
+    leftBottomStyle: StyleSheet.create({
       top: '80px',
       left: '-43px',
 
@@ -115,7 +115,7 @@ module.exports = {
       transform: 'rotate(45deg)'
     }),
 
-    rightBottomStyle: ReactStyle({
+    rightBottomStyle: StyleSheet.create({
       top: '80px',
       right: '-43px',
 
@@ -129,7 +129,7 @@ module.exports = {
 
   GitHubForkRibbonWrapper: {
 
-    baseStyle: ReactStyle({
+    baseStyle: StyleSheet.create({
       width: '150px',
       height: '150px',
       position: 'absolute',
@@ -139,26 +139,26 @@ module.exports = {
       pointerEvents: 'none'
     }),
 
-    fixedStyle: ReactStyle({
+    fixedStyle: StyleSheet.create({
       position: 'fixed'
     }),
 
-    leftStyle: ReactStyle({
+    leftStyle: StyleSheet.create({
       left: '0'
     }),
 
-    rightStyle: ReactStyle({
+    rightStyle: StyleSheet.create({
       right: '0'
     }),
 
-    leftBottomStyle: ReactStyle({
+    leftBottomStyle: StyleSheet.create({
       position: 'fixed',
       top: 'inherit',
       bottom: '0',
       left: '0'
     }),
 
-    rightBottomStyle: ReactStyle({
+    rightBottomStyle: StyleSheet.create({
       position: 'fixed',
       top: 'inherit',
       bottom: '0',
