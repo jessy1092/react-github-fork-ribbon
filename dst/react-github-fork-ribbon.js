@@ -2,25 +2,11 @@
 (function (global){
 "use strict";
 
-var _interopRequire = function _interopRequire(obj) {
-  return obj && obj.__esModule ? obj["default"] : obj;
-};
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
-var _objectWithoutProperties = function _objectWithoutProperties(obj, keys) {
-  var target = {};for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-  }return target;
-};
+var _objectWithoutProperties = function (obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; };
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }return target;
-};
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var RibbonStyle = _interopRequire(require("./ribbonStyle"));
 
@@ -106,15 +92,26 @@ module.exports = global.GitHubForkRibbon = React.createClass({
     this._setPositionStyle();
     this._setColorStyle();
 
-    return React.createElement("div", _extends({}, other, {
-      className: "github-fork-ribbon-wrapper " + this.position,
-      styles: this.wrapperStyle }), React.createElement("div", { className: "github-fork-ribbon",
-      styles: this.ribbonStyle }, React.createElement("a", { href: this.props.href,
-      target: this.props.target,
-      styles: GitHubForkRibbon.urlStyle }, this.props.children)));
+    return React.createElement(
+      "div",
+      _extends({}, other, {
+        className: "github-fork-ribbon-wrapper " + this.position,
+        styles: this.wrapperStyle }),
+      React.createElement(
+        "div",
+        { className: "github-fork-ribbon",
+          styles: this.ribbonStyle },
+        React.createElement(
+          "a",
+          { href: this.props.href,
+            target: this.props.target,
+            styles: GitHubForkRibbon.urlStyle },
+          this.props.children
+        )
+      )
+    );
   }
 });
-
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./ribbonStyle":2,"react/addons":13}],2:[function(require,module,exports){
 /*
@@ -126,17 +123,15 @@ module.exports = global.GitHubForkRibbon = React.createClass({
 
 "use strict";
 
-var _interopRequire = function _interopRequire(obj) {
-  return obj && obj.__esModule ? obj["default"] : obj;
-};
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
 var StyleSheet = _interopRequire(require("react-style"));
 
 module.exports = {
 
-  GitHubForkRibbon: {
+  GitHubForkRibbon: StyleSheet.create({
 
-    baseStyle: StyleSheet.create({
+    baseStyle: {
       /* The right and left classes determine the side we attach our banner to */
       position: "absolute",
 
@@ -164,9 +159,9 @@ module.exports = {
 
       zIndex: "9999",
       pointerEvents: "auto"
-    }),
+    },
 
-    urlStyle: StyleSheet.create({
+    urlStyle: {
       /* Set the text properties */
       color: "#fff",
       textDecoration: "none",
@@ -187,25 +182,25 @@ module.exports = {
       borderStyle: "dotted",
       // borderColor: '#fff',
       borderColor: "rgba(255, 255, 255, 0.7)"
-    }),
+    },
 
-    redColor: StyleSheet.create({
+    redColor: {
       backgroundColor: "#a00"
-    }),
+    },
 
-    orangeColor: StyleSheet.create({
+    orangeColor: {
       backgroundColor: "#f80"
-    }),
+    },
 
-    blackColor: StyleSheet.create({
+    blackColor: {
       backgroundColor: "#333"
-    }),
+    },
 
-    greenColor: StyleSheet.create({
+    greenColor: {
       backgroundColor: "#090"
-    }),
+    },
 
-    leftStyle: StyleSheet.create({
+    leftStyle: {
       top: "42px",
       left: "-43px",
 
@@ -214,9 +209,9 @@ module.exports = {
       // -ms-transform: 'rotate(-45deg)',
       // -o-transform: 'rotate(-45deg)',
       transform: "rotate(-45deg)"
-    }),
+    },
 
-    rightStyle: StyleSheet.create({
+    rightStyle: {
       top: "42px",
       right: "-43px",
 
@@ -225,9 +220,9 @@ module.exports = {
       // -ms-transform: 'rotate(45deg)',
       // -o-transform: 'rotate(45deg)',
       transform: "rotate(45deg)"
-    }),
+    },
 
-    leftBottomStyle: StyleSheet.create({
+    leftBottomStyle: {
       top: "80px",
       left: "-43px",
 
@@ -236,9 +231,9 @@ module.exports = {
       // -ms-transform: 'rotate(45deg)',
       // -o-transform: 'rotate(45deg)',
       transform: "rotate(45deg)"
-    }),
+    },
 
-    rightBottomStyle: StyleSheet.create({
+    rightBottomStyle: {
       top: "80px",
       right: "-43px",
 
@@ -247,12 +242,12 @@ module.exports = {
       // -ms-transform: 'rotate(-45deg)',
       // -o-transform: 'rotate(-45deg)',
       transform: "rotate(-45deg)"
-    })
-  },
+    }
+  }),
 
-  GitHubForkRibbonWrapper: {
+  GitHubForkRibbonWrapper: StyleSheet.create({
 
-    baseStyle: StyleSheet.create({
+    baseStyle: {
       width: "150px",
       height: "150px",
       position: "absolute",
@@ -260,36 +255,35 @@ module.exports = {
       top: "0",
       zIndex: "9999",
       pointerEvents: "none"
-    }),
+    },
 
-    fixedStyle: StyleSheet.create({
+    fixedStyle: {
       position: "fixed"
-    }),
+    },
 
-    leftStyle: StyleSheet.create({
+    leftStyle: {
       left: "0"
-    }),
+    },
 
-    rightStyle: StyleSheet.create({
+    rightStyle: {
       right: "0"
-    }),
+    },
 
-    leftBottomStyle: StyleSheet.create({
+    leftBottomStyle: {
       position: "fixed",
       top: "inherit",
       bottom: "0",
       left: "0"
-    }),
+    },
 
-    rightBottomStyle: StyleSheet.create({
+    rightBottomStyle: {
       position: "fixed",
       top: "inherit",
       bottom: "0",
       right: "0"
-    })
-  }
+    }
+  })
 };
-
 },{"react-style":9}],3:[function(require,module,exports){
 // shim for using process in browser
 

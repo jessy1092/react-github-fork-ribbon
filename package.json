@@ -1,7 +1,7 @@
 {
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "keywords": [
     "fork",
     "GitHub",
@@ -32,7 +32,7 @@
     "test": "node ./node_modules/jest-cli/bin/jest.js"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">=0.10.x"
   },
   "main": "component/index.js",
   "dependencies": {
@@ -53,16 +53,6 @@
     "reactify": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "experimental": true
-        }
-      ]
-    ]
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/test/preprocessor.js",

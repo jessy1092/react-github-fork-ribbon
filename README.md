@@ -1,8 +1,12 @@
 React GitHub Fork Ribbon
 =============
-[![Dependency Status][david-dm-image]][david-dm-url]
+[![npm][npm-image]][npm-url] [![Dependency Status][david-dm-image]][david-dm-url]
 
 Pure inline style github fork ribbon on React component. The inline style css is from ["Fork me on GitHub" CSS ribbon](http://simonwhitaker.github.io/github-fork-ribbon-css/).
+
+|         | React = 0.12 | React >= 0.13 |
+| ------- | ------------ | ------------- |
+| Version | <= 0.2       | >= 0.3        |
 
 ## Usage
 
@@ -62,6 +66,11 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.3.0 - 2015/03/28
+
+- Support `react` 0.13.x and `react-style` 0.5.x version
+- Use ES6 feature.
+
 ### Version 0.2.0 - 2015/03/07
 
 - Add attribute: `color`
@@ -79,7 +88,7 @@ It has four color.
 2. Create your feature-branch `git checkout -b your-new-feature-branch`
 3. Commit your change `git commit -am 'Add new feature'`
 4. Push to the branch `git push origin your-new-feature-branch`
-5. Create new Pull Request with `develop` branch
+5. Create new Pull Request with `master` branch
 
 ## License
 
@@ -106,7 +115,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [react-github-fork-ribbon-url]: https://github.com/jessy1092/react-github-fork-ribbon/releases
 
+[npm-image]: https://img.shields.io/npm/v/react-github-fork-ribbon.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-github-fork-ribbon
+
 [david-dm-image]: https://david-dm.org/jessy1092/react-github-fork-ribbon.svg?style=flat-square
 [david-dm-url]: https://david-dm.org/jessy1092/react-github-fork-ribbon
+
 [david-dm-dev-image]: https://david-dm.org/jessy1092/react-github-fork-ribbon/dev-status.svg?style=flat-square
 [david-dm-dev-url]: https://david-dm.org/jessy1092/react-github-fork-ribbon#info=devDependencies
