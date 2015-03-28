@@ -11,9 +11,9 @@ import StyleSheet from 'react-style';
 
 export default {
 
-  GitHubForkRibbon: {
+  GitHubForkRibbon: StyleSheet.create({
 
-    baseStyle: StyleSheet.create({
+    baseStyle: {
       /* The right and left classes determine the side we attach our banner to */
       position: 'absolute',
 
@@ -41,9 +41,9 @@ export default {
 
       zIndex: '9999',
       pointerEvents: 'auto'
-    }),
+    },
 
-    urlStyle: StyleSheet.create({
+    urlStyle: {
       /* Set the text properties */
       color: '#fff',
       textDecoration: 'none',
@@ -64,25 +64,25 @@ export default {
       borderStyle: 'dotted',
       // borderColor: '#fff',
       borderColor: 'rgba(255, 255, 255, 0.7)'
-    }),
+    },
 
-    redColor: StyleSheet.create({
+    redColor: {
       backgroundColor: '#a00'
-    }),
+    },
 
-    orangeColor: StyleSheet.create({
+    orangeColor: {
       backgroundColor: '#f80'
-    }),
+    },
 
-    blackColor: StyleSheet.create({
+    blackColor: {
       backgroundColor: '#333'
-    }),
+    },
 
-    greenColor: StyleSheet.create({
+    greenColor: {
       backgroundColor: '#090'
-    }),
+    },
 
-    leftStyle: StyleSheet.create({
+    leftStyle: {
       top: '42px',
       left: '-43px',
 
@@ -91,9 +91,9 @@ export default {
       // -ms-transform: 'rotate(-45deg)',
       // -o-transform: 'rotate(-45deg)',
       transform: 'rotate(-45deg)'
-    }),
+    },
 
-    rightStyle: StyleSheet.create({
+    rightStyle: {
       top: '42px',
       right: '-43px',
 
@@ -102,9 +102,9 @@ export default {
       // -ms-transform: 'rotate(45deg)',
       // -o-transform: 'rotate(45deg)',
       transform: 'rotate(45deg)'
-    }),
+    },
 
-    leftBottomStyle: StyleSheet.create({
+    leftBottomStyle: {
       top: '80px',
       left: '-43px',
 
@@ -113,9 +113,9 @@ export default {
       // -ms-transform: 'rotate(45deg)',
       // -o-transform: 'rotate(45deg)',
       transform: 'rotate(45deg)'
-    }),
+    },
 
-    rightBottomStyle: StyleSheet.create({
+    rightBottomStyle: {
       top: '80px',
       right: '-43px',
 
@@ -124,12 +124,12 @@ export default {
       // -ms-transform: 'rotate(-45deg)',
       // -o-transform: 'rotate(-45deg)',
       transform: 'rotate(-45deg)'
-    })
-  },
+    }
+  }),
 
-  GitHubForkRibbonWrapper: {
+  GitHubForkRibbonWrapper: StyleSheet.create({
 
-    baseStyle: StyleSheet.create({
+    baseStyle: {
       width: '150px',
       height: '150px',
       position: 'absolute',
@@ -137,32 +137,32 @@ export default {
       top: '0',
       zIndex: '9999',
       pointerEvents: 'none'
-    }),
+    },
 
-    fixedStyle: StyleSheet.create({
+    fixedStyle: {
       position: 'fixed'
-    }),
+    },
 
-    leftStyle: StyleSheet.create({
+    leftStyle: {
       left: '0'
-    }),
+    },
 
-    rightStyle: StyleSheet.create({
+    rightStyle: {
       right: '0'
-    }),
+    },
 
-    leftBottomStyle: StyleSheet.create({
+    leftBottomStyle: {
       position: 'fixed',
       top: 'inherit',
       bottom: '0',
       left: '0'
-    }),
+    },
 
-    rightBottomStyle: StyleSheet.create({
+    rightBottomStyle: {
       position: 'fixed',
       top: 'inherit',
       bottom: '0',
       right: '0'
-    })
-  }
+    }
+  })
 };
