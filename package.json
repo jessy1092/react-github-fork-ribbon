@@ -1,7 +1,7 @@
 {
   "name"       : "react-github-fork-ribbon-website",
   "description": "Github fork ribbon Website.",
-  "version"    : "0.2.1",
+  "version"    : "0.2.2",
   "contributor": [
     {
       "name" : "Lee",
@@ -17,9 +17,9 @@
   "dependencies": {
     "highlight.js": "^8.4.0",
     "jquery": "^2.1.1",
-    "react": "^0.12.0",
-    "react-github-fork-ribbon": "^0.2.1",
-    "react-semantify": "^0.2.3",
+    "react": "^0.13.1",
+    "react-github-fork-ribbon": "^0.3.0",
+    "react-semantify": "^0.3.0",
     "semantic-ui": "~1.8.1"
   },
   "devDependencies": {
