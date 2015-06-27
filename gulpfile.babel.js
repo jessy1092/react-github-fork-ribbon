@@ -8,10 +8,11 @@ import buffer     from 'vinyl-buffer';
 import browserify from 'browserify';
 import gbabel     from 'gulp-babel';
 
+let src_files = './src/*.js';
 let build_path = 'dst';
 
 gulp.task('transpile', () => {
-  return gulp.src('./src/*.js')
+  return gulp.src(src_files)
     .pipe(gbabel({experimental: true}))
     .pipe(gulp.dest('./component/'));
 });
@@ -27,10 +28,9 @@ gulp.task('browserify', () => {
     .pipe(gulp.dest(build_path));
 });
 
-gulp.task('watch', (done) => {
-  gulp.watch('./src/*.js', 'build');
-  done()
-})
+gulp.task('watch', () => {
+  gulp.watch([src_files], gulp.series('build'));
+});
 
 gulp.task('build', gulp.series('transpile', 'browserify'));
 gulp.task('dev', gulp.series('build', 'watch'));
