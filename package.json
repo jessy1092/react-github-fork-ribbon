@@ -36,11 +36,9 @@
   },
   "main": "component/index.js",
   "dependencies": {
-    "react": "^0.13.1",
-    "react-style": "^0.5.1"
+    "react": "^0.13.1"
   },
   "devDependencies": {
-    "LiveScript": "^1.3.1",
     "babel": "^4.7.1",
     "babel-core": "^4.4.5",
     "babelify": "^5.0.3",
