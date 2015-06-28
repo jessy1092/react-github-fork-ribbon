@@ -1,84 +1,90 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (global){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
-
-var _objectWithoutProperties = function (obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; };
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var React = _interopRequire(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var assign = _interopRequire(require("react/lib/Object.assign"));
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var _ribbonStyle = require("./ribbonStyle");
+var _react = require('react');
 
-var GitHubForkRibbon = _ribbonStyle.GitHubForkRibbon;
-var GitHubForkRibbonWrapper = _ribbonStyle.GitHubForkRibbonWrapper;
-module.exports = global.GitHubForkRibbon = React.createClass({
-  displayName: "GitHubForkRibbon",
+var _react2 = _interopRequireDefault(_react);
+
+var _reactLibObjectAssign = require('react/lib/Object.assign');
+
+var _reactLibObjectAssign2 = _interopRequireDefault(_reactLibObjectAssign);
+
+var _ribbonStyle = require('./ribbonStyle');
+
+exports['default'] = global.GitHubForkRibbon = _react2['default'].createClass({
+  displayName: 'GitHubForkRibbon',
 
   _setPositionStyle: function _setPositionStyle() {
 
-    this.ribbonStyle = assign({}, GitHubForkRibbon.baseStyle);
-    this.wrapperStyle = assign({}, GitHubForkRibbonWrapper.baseStyle);
-    this.ribbonPosition = "";
+    this.ribbonStyle = (0, _reactLibObjectAssign2['default'])({}, _ribbonStyle.GitHubForkRibbon.baseStyle);
+    this.wrapperStyle = (0, _reactLibObjectAssign2['default'])({}, _ribbonStyle.GitHubForkRibbonWrapper.baseStyle);
+    this.ribbonPosition = '';
 
     switch (this.props.position) {
 
-      case "left":
-        assign(this.ribbonStyle, GitHubForkRibbon.leftStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.leftStyle);
-        this.ribbonPosition = "left";
+      case 'left':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.leftStyle);
+        (0, _reactLibObjectAssign2['default'])(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftStyle);
+        this.ribbonPosition = 'left';
         break;
 
-      case "right":
-        assign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
-        this.ribbonPosition = "right";
+      case 'right':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightStyle);
+        (0, _reactLibObjectAssign2['default'])(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle);
+        this.ribbonPosition = 'right';
         break;
 
-      case "left-bottom":
-        assign(this.ribbonStyle, GitHubForkRibbon.leftBottomStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.leftBottomStyle);
-        this.ribbonPosition = "left-bottom";
+      case 'left-bottom':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.leftBottomStyle);
+        (0, _reactLibObjectAssign2['default'])(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftBottomStyle);
+        this.ribbonPosition = 'left-bottom';
         break;
 
-      case "right-bottom":
-        assign(this.ribbonStyle, GitHubForkRibbon.rightBottomStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightBottomStyle);
-        this.ribbonPosition = "right-bottom";
+      case 'right-bottom':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightBottomStyle);
+        (0, _reactLibObjectAssign2['default'])(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightBottomStyle);
+        this.ribbonPosition = 'right-bottom';
         break;
 
       default:
-        assign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
-        this.ribbonPosition = "right";
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightStyle);
+        (0, _reactLibObjectAssign2['default'])(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle);
+        this.ribbonPosition = 'right';
         break;
     }
   },
 
   _setColorStyle: function _setColorStyle() {
     switch (this.props.color) {
-      case "red":
-        assign(this.ribbonStyle, GitHubForkRibbon.redColor);
+      case 'red':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.redColor);
         break;
 
-      case "orange":
-        assign(this.ribbonStyle, GitHubForkRibbon.orangeColor);
+      case 'orange':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.orangeColor);
         break;
 
-      case "black":
-        assign(this.ribbonStyle, GitHubForkRibbon.blackColor);
+      case 'black':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.blackColor);
         break;
 
-      case "green":
-        assign(this.ribbonStyle, GitHubForkRibbon.greenColor);
+      case 'green':
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.greenColor);
         break;
 
       default:
-        assign(this.ribbonStyle, GitHubForkRibbon.redColor);
+        (0, _reactLibObjectAssign2['default'])(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.redColor);
         break;
     }
   },
@@ -90,55 +96,56 @@ module.exports = global.GitHubForkRibbon = React.createClass({
     var target = _props.target;
     var color = _props.color;
 
-    var other = _objectWithoutProperties(_props, ["position", "href", "target", "color"]);
+    var other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
 
     this._setPositionStyle();
     this._setColorStyle();
 
-    return React.createElement(
-      "div",
+    return _react2['default'].createElement(
+      'div',
       _extends({}, other, {
-        className: "github-fork-ribbon-wrapper " + this.ribbonPosition,
+        className: 'github-fork-ribbon-wrapper ' + this.ribbonPosition,
         style: this.wrapperStyle }),
-      React.createElement(
-        "div",
-        { className: "github-fork-ribbon",
+      _react2['default'].createElement(
+        'div',
+        { className: 'github-fork-ribbon',
           style: this.ribbonStyle },
-        React.createElement(
-          "a",
+        _react2['default'].createElement(
+          'a',
           { href: href,
             target: target,
-            style: GitHubForkRibbon.urlStyle },
+            style: _ribbonStyle.GitHubForkRibbon.urlStyle },
           this.props.children
         )
       )
     );
   }
 });
+module.exports = exports['default'];
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./ribbonStyle":2,"react":158,"react/lib/Object.assign":29}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /*
 * "Fork me on GitHub" CSS ribbon v0.1.1 | MIT License
 * https://github.com/simonwhitaker/github-fork-ribbon-css
 *
 * 20150116 Lee: use css source for inline style react component.
 */
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 var GitHubForkRibbon = {
 
   baseStyle: {
     /* The right and left classes determine the side we attach our banner to */
-    position: "absolute",
+    position: 'absolute',
 
     /* Add a bit of padding to give some substance outside the "stitching" */
-    padding: "2px 0",
+    padding: '2px 0',
 
     /* Set the base colour */
-    backgroundColor: "#a00",
+    backgroundColor: '#a00',
 
     /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
     // backgroundImage: '-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)))',
@@ -146,101 +153,101 @@ var GitHubForkRibbon = {
     // backgroundImage: '-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
     // backgroundImage: '-ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
     // backgroundImage: '-o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
-    backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))",
+    backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
 
     /* Add a drop shadow */
     // -webkit-box-shadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
     // -moz-box-shadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
-    boxShadow: "0 2px 3px 0 rgba(0, 0, 0, 0.5)",
+    boxShadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
 
     /* Set the font */
-    font: "700 13px \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    font: '700 13px "Helvetica Neue", Helvetica, Arial, sans-serif',
 
-    zIndex: "9999",
-    pointerEvents: "auto"
+    zIndex: '9999',
+    pointerEvents: 'auto'
   },
 
   urlStyle: {
     /* Set the text properties */
-    color: "#fff",
-    textDecoration: "none",
-    textShadow: "0 -1px rgba(0, 0, 0, 0.5)",
-    textAlign: "center",
+    color: '#fff',
+    textDecoration: 'none',
+    textShadow: '0 -1px rgba(0, 0, 0, 0.5)',
+    textAlign: 'center',
 
     /* Set the geometry. If you fiddle with these you'll also need
        to tweak the top and right values in .github-fork-ribbon. */
-    width: "200px",
-    lineHeight: "20px",
+    width: '200px',
+    lineHeight: '20px',
 
     /* Set the layout properties */
-    display: "inline-block",
-    padding: "2px 0",
+    display: 'inline-block',
+    padding: '2px 0',
 
     /* Add "stitching" effect */
-    borderWidth: "1px 0",
-    borderStyle: "dotted",
+    borderWidth: '1px 0',
+    borderStyle: 'dotted',
     // borderColor: '#fff',
-    borderColor: "rgba(255, 255, 255, 0.7)"
+    borderColor: 'rgba(255, 255, 255, 0.7)'
   },
 
   redColor: {
-    backgroundColor: "#a00"
+    backgroundColor: '#a00'
   },
 
   orangeColor: {
-    backgroundColor: "#f80"
+    backgroundColor: '#f80'
   },
 
   blackColor: {
-    backgroundColor: "#333"
+    backgroundColor: '#333'
   },
 
   greenColor: {
-    backgroundColor: "#090"
+    backgroundColor: '#090'
   },
 
   leftStyle: {
-    top: "42px",
-    left: "-43px",
+    top: '42px',
+    left: '-43px',
 
     // -webkit-transform: 'rotate(-45deg)',
     // -moz-transform: 'rotate(-45deg)',
     // -ms-transform: 'rotate(-45deg)',
     // -o-transform: 'rotate(-45deg)',
-    transform: "rotate(-45deg)"
+    transform: 'rotate(-45deg)'
   },
 
   rightStyle: {
-    top: "42px",
-    right: "-43px",
+    top: '42px',
+    right: '-43px',
 
     // -webkit-transform: 'rotate(45deg)',
     // -moz-transform: 'rotate(45deg)',
     // -ms-transform: 'rotate(45deg)',
     // -o-transform: 'rotate(45deg)',
-    transform: "rotate(45deg)"
+    transform: 'rotate(45deg)'
   },
 
   leftBottomStyle: {
-    top: "80px",
-    left: "-43px",
+    top: '80px',
+    left: '-43px',
 
     // -webkit-transform: 'rotate(45deg)',
     // -moz-transform: 'rotate(45deg)',
     // -ms-transform: 'rotate(45deg)',
     // -o-transform: 'rotate(45deg)',
-    transform: "rotate(45deg)"
+    transform: 'rotate(45deg)'
   },
 
   rightBottomStyle: {
-    top: "80px",
-    right: "-43px",
+    top: '80px',
+    right: '-43px',
 
     // -webkit-transform: 'rotate(-45deg)',
     // -moz-transform: 'rotate(-45deg)',
     // -ms-transform: 'rotate(-45deg)',
     // -o-transform: 'rotate(-45deg)',
-    transform: "rotate(-45deg)"
+    transform: 'rotate(-45deg)'
   }
 };
 
@@ -248,39 +255,39 @@ exports.GitHubForkRibbon = GitHubForkRibbon;
 var GitHubForkRibbonWrapper = {
 
   baseStyle: {
-    width: "150px",
-    height: "150px",
-    position: "absolute",
-    overflow: "hidden",
-    top: "0",
-    zIndex: "9999",
-    pointerEvents: "none"
+    width: '150px',
+    height: '150px',
+    position: 'absolute',
+    overflow: 'hidden',
+    top: '0',
+    zIndex: '9999',
+    pointerEvents: 'none'
   },
 
   fixedStyle: {
-    position: "fixed"
+    position: 'fixed'
   },
 
   leftStyle: {
-    left: "0"
+    left: '0'
   },
 
   rightStyle: {
-    right: "0"
+    right: '0'
   },
 
   leftBottomStyle: {
-    position: "fixed",
-    top: "inherit",
-    bottom: "0",
-    left: "0"
+    position: 'fixed',
+    top: 'inherit',
+    bottom: '0',
+    left: '0'
   },
 
   rightBottomStyle: {
-    position: "fixed",
-    top: "inherit",
-    bottom: "0",
-    right: "0"
+    position: 'fixed',
+    top: 'inherit',
+    bottom: '0',
+    right: '0'
   }
 };
 exports.GitHubForkRibbonWrapper = GitHubForkRibbonWrapper;
@@ -290,32 +297,64 @@ exports.GitHubForkRibbonWrapper = GitHubForkRibbonWrapper;
 var process = module.exports = {};
 var queue = [];
 var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
 
 function drainQueue() {
     if (draining) {
         return;
     }
+    var timeout = setTimeout(cleanUpNextTick);
     draining = true;
-    var currentQueue;
+
     var len = queue.length;
     while(len) {
         currentQueue = queue;
         queue = [];
-        var i = -1;
-        while (++i < len) {
-            currentQueue[i]();
+        while (++queueIndex < len) {
+            currentQueue[queueIndex].run();
         }
+        queueIndex = -1;
         len = queue.length;
     }
+    currentQueue = null;
     draining = false;
+    clearTimeout(timeout);
 }
+
 process.nextTick = function (fun) {
-    queue.push(fun);
-    if (!draining) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
         setTimeout(drainQueue, 0);
     }
 };
 
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
 process.title = 'browser';
 process.browser = true;
 process.env = {};

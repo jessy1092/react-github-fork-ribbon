@@ -1,7 +1,7 @@
 {
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "keywords": [
     "fork",
     "GitHub",
@@ -28,8 +28,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp dev",
-    "prepublish": "babel gulpfile.babel.js --out-file gulpfile.js && gulp transpile",
-    "test": "node ./node_modules/jest-cli/bin/jest.js"
+    "prepublish": "babel gulpfile.babel.js --out-file gulpfile.js && gulp transpile"
   },
   "engines": {
     "node": ">=0.10.x"
@@ -50,14 +49,5 @@
     "gulp-util": "^3.0.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/test/preprocessor.js",
-    "testPathDirs": [
-      "<rootDir>/test"
-    ],
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ]
   }
 }

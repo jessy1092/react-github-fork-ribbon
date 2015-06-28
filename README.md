@@ -66,6 +66,11 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.4.0 - 2015/06/28
+
+- Switch to vanilla inline styles. [PR#7](https://github.com/jessy1092/react-github-fork-ribbon/pull/7)
+- Update Dev-dependencies version. `babel` => 5.6.14, `browserify` => 10.2.4
+
 ### Version 0.3.0 - 2015/03/28
 
 - Support `react` 0.13.x and `react-style` 0.5.x version
