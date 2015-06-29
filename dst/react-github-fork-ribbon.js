@@ -156,8 +156,8 @@ var GitHubForkRibbon = {
     backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
 
     /* Add a drop shadow */
-    // -webkit-box-shadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
-    // -moz-box-shadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
+    WebkitBoxShadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
+    MozBoxShadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
     boxShadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
 
     /* Set the font */
@@ -210,10 +210,10 @@ var GitHubForkRibbon = {
     top: '42px',
     left: '-43px',
 
-    // -webkit-transform: 'rotate(-45deg)',
-    // -moz-transform: 'rotate(-45deg)',
-    // -ms-transform: 'rotate(-45deg)',
-    // -o-transform: 'rotate(-45deg)',
+    WebkitTransform: 'rotate(-45deg)',
+    MozTransform: 'rotate(-45deg)',
+    msTransform: 'rotate(-45deg)',
+    OTransform: 'rotate(-45deg)',
     transform: 'rotate(-45deg)'
   },
 
@@ -221,10 +221,10 @@ var GitHubForkRibbon = {
     top: '42px',
     right: '-43px',
 
-    // -webkit-transform: 'rotate(45deg)',
-    // -moz-transform: 'rotate(45deg)',
-    // -ms-transform: 'rotate(45deg)',
-    // -o-transform: 'rotate(45deg)',
+    WebkitTransform: 'rotate(45deg)',
+    MozTransform: 'rotate(45deg)',
+    msTransform: 'rotate(45deg)',
+    OTransform: 'rotate(45deg)',
     transform: 'rotate(45deg)'
   },
 
@@ -232,10 +232,10 @@ var GitHubForkRibbon = {
     top: '80px',
     left: '-43px',
 
-    // -webkit-transform: 'rotate(45deg)',
-    // -moz-transform: 'rotate(45deg)',
-    // -ms-transform: 'rotate(45deg)',
-    // -o-transform: 'rotate(45deg)',
+    WebkitTransform: 'rotate(45deg)',
+    MozTransform: 'rotate(45deg)',
+    msTransform: 'rotate(45deg)',
+    OTransform: 'rotate(45deg)',
     transform: 'rotate(45deg)'
   },
 
@@ -243,10 +243,10 @@ var GitHubForkRibbon = {
     top: '80px',
     right: '-43px',
 
-    // -webkit-transform: 'rotate(-45deg)',
-    // -moz-transform: 'rotate(-45deg)',
-    // -ms-transform: 'rotate(-45deg)',
-    // -o-transform: 'rotate(-45deg)',
+    WebkitTransform: 'rotate(-45deg)',
+    MozTransform: 'rotate(-45deg)',
+    msTransform: 'rotate(-45deg)',
+    OTransform: 'rotate(-45deg)',
     transform: 'rotate(-45deg)'
   }
 };

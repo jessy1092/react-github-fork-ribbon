@@ -66,6 +66,11 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.4.1 - 2015/06/29
+
+- Insert the relevant browser prefix.
+  + Webkit, Moz, O, ms.
+
 ### Version 0.4.0 - 2015/06/28
 
 - Switch to vanilla inline styles. [PR#7](https://github.com/jessy1092/react-github-fork-ribbon/pull/7)
