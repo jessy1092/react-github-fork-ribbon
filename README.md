@@ -14,7 +14,32 @@ Pure inline style github fork ribbon on React component. The inline style css is
 npm install react-github-fork-ribbon
 ```
 
-Ex.
+Ex. React 0.14
+```js
+var React            = require('react');
+var ReactDOM         = require('react-dom');
+var GitHubForkRibbon = require('react-github-fork-ribbon');
+
+var Content = React.createClass({
+
+  render: function () {
+    return (
+      <GitHubForkRibbon href="//www.google.com"
+                        target="_blank"
+                        position="right">
+        Fork me on GitHub
+      </GitHubForkRibbon>
+    );
+  }
+});
+
+ReactDOM.render(
+  <Content />,
+  document.getElementById('content')
+);
+```
+
+Ex. React 0.13
 ```js
 var React            = require('react');
 var GitHubForkRibbon = require('react-github-fork-ribbon');
@@ -23,8 +48,8 @@ var Content = React.createClass({
 
   render: function () {
     return (
-      <GitHubForkRibbon href="//www.google.com" 
-                        target="_blank" 
+      <GitHubForkRibbon href="//www.google.com"
+                        target="_blank"
                         position="right">
         Fork me on GitHub
       </GitHubForkRibbon>
@@ -65,6 +90,10 @@ It has four color.
 - `green`
 
 ## Release Notes
+
+### Version 0.4.2 - 2015/10/11
+
+- Support React 0.14
 
 ### Version 0.4.1 - 2015/06/29
 
