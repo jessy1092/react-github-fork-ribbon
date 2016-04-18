@@ -1,47 +1,53 @@
 {
-  "name"       : "react-github-fork-ribbon-website",
+  "name": "react-github-fork-ribbon-website",
   "description": "Github fork ribbon Website.",
-  "version"    : "0.2.4",
+  "version": "0.2.4",
   "contributor": [
     {
-      "name" : "Lee",
+      "name": "Lee",
       "email": "jessy1092@gmail.com"
     }
   ],
   "scripts": {
     "start": "gulp dev"
   },
-  "engines":{
-    "node": "0.10.x"
+  "engines": {
+    "node": ">= 0.10.x"
   },
   "dependencies": {
     "highlight.js": "^8.4.0",
     "jquery": "^2.1.1",
-    "react": "^0.13.1",
-    "react-github-fork-ribbon": "^0.4.1",
-    "react-semantify": "^0.3.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-github-fork-ribbon": "0.4.3",
+    "react-semantify": "^0.4.2",
     "semantic-ui": "~1.8.1"
   },
   "devDependencies": {
-    "babelify": "^6.1.2",
-    "browserify": "^10.2.4",
+    "LiveScript": "^1.3.1",
+    "babel": "^6.5.2",
+    "babel-core": "^6.7.6",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^11.2.0",
     "connect-livereload": "^0.5.0",
     "express": "^4.12.3",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.0",
     "gulp-if": "^1.2.5",
     "gulp-jade": "^1.0.0",
     "gulp-livereload": "^3.7.0",
     "gulp-plumber": "^0.6.6",
-    "gulp-uglify": "^1.0.2",
-    "gulp-util": "^3.0.1",
-    "LiveScript": "^1.3.1",
-    "vinyl-source-stream": "^1.1.0",
-    "vinyl-buffer": "^1.0.0"
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "repository": [
     {
       "type": "git",
-      "url" : "https://github.com/jessy1092/react-senta-ui-dev"
+      "url": "https://github.com/jessy1092/react-senta-ui-dev"
     }
   ],
   "license": "MIT"

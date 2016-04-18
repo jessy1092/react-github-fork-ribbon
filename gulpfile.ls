@@ -1,6 +1,6 @@
 require! <[gulp gulp-util gulp-livereload gulp-jade gulp-plumber gulp-uglify]>
 require! <[express connect-livereload path]>
-require! <[vinyl-source-stream vinyl-buffer browserify babelify]>
+require! <[vinyl-source-stream vinyl-buffer browserify]>
 
 app        = express!
 build_path = '_public'
@@ -33,7 +33,7 @@ gulp.task 'css', ->
 
 gulp.task 'browserify', ->
   browserify './client/scripts/index.js'
-    .transform babelify
+    .transform 'babelify' {presets: <[es2015 react stage-0]>}
     .bundle!
     .pipe source 'bundle.js'
     .pipe buffer!

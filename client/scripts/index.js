@@ -4,12 +4,15 @@ var $    = require('jquery');
 global.$ = global.jQuery = $;
 require('semantic-ui/dist/semantic.js');
 
-var React            = require('react/addons');
-var GitHubForkRibbon = require('react-github-fork-ribbon');
+var React            = require('react');
+var ReactDOM         = require('react-dom');
+var GitHubForkRibbon = require('react-github-fork-ribbon').default;
 var CodeBlock        = require('./CodeBlock.jsx');
 var Semantify        = require('react-semantify');
 
 var {Header, List, Item} = Semantify;
+
+console.log(GitHubForkRibbon);
 
 var Index = React.createClass({
 
@@ -107,4 +110,4 @@ var Index = React.createClass({
   }
 });
 
-React.render(<Index />, document.getElementsByClassName('main')[0]);
+ReactDOM.render(<Index />, document.getElementsByClassName('main')[0]);
