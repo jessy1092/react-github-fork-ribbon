@@ -1,5 +1,5 @@
 import React from 'react';
-import assign from 'react/lib/Object.assign';
+import objectAssign from 'object-assign';
 
 import {
   GitHubForkRibbon,
@@ -10,39 +10,39 @@ export default global.GitHubForkRibbon = React.createClass({
 
   _setPositionStyle() {
 
-    this.ribbonStyle = assign({}, GitHubForkRibbon.baseStyle);
-    this.wrapperStyle = assign({}, GitHubForkRibbonWrapper.baseStyle);
+    this.ribbonStyle = objectAssign({}, GitHubForkRibbon.baseStyle);
+    this.wrapperStyle = objectAssign({}, GitHubForkRibbonWrapper.baseStyle);
     this.ribbonPosition = '';
 
     switch(this.props.position) {
 
       case 'left':
-        assign(this.ribbonStyle, GitHubForkRibbon.leftStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.leftStyle);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.leftStyle);
+        objectAssign(this.wrapperStyle, GitHubForkRibbonWrapper.leftStyle);
         this.ribbonPosition = 'left';
         break;
 
       case 'right':
-        assign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
+        objectAssign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
         this.ribbonPosition = 'right';
         break;
 
       case 'left-bottom':
-        assign(this.ribbonStyle, GitHubForkRibbon.leftBottomStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.leftBottomStyle);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.leftBottomStyle);
+        objectAssign(this.wrapperStyle, GitHubForkRibbonWrapper.leftBottomStyle);
         this.ribbonPosition = 'left-bottom';
         break;
 
       case 'right-bottom':
-        assign(this.ribbonStyle, GitHubForkRibbon.rightBottomStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightBottomStyle);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.rightBottomStyle);
+        objectAssign(this.wrapperStyle, GitHubForkRibbonWrapper.rightBottomStyle);
         this.ribbonPosition = 'right-bottom';
         break;
 
       default:
-        assign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
-        assign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.rightStyle);
+        objectAssign(this.wrapperStyle, GitHubForkRibbonWrapper.rightStyle);
         this.ribbonPosition = 'right'
         break;
     }
@@ -51,23 +51,23 @@ export default global.GitHubForkRibbon = React.createClass({
   _setColorStyle() {
     switch(this.props.color){
       case 'red':
-        assign(this.ribbonStyle, GitHubForkRibbon.redColor);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.redColor);
         break;
 
       case 'orange':
-        assign(this.ribbonStyle, GitHubForkRibbon.orangeColor);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.orangeColor);
         break;
 
       case 'black':
-        assign(this.ribbonStyle, GitHubForkRibbon.blackColor);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.blackColor);
         break;
 
       case 'green':
-        assign(this.ribbonStyle, GitHubForkRibbon.greenColor);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.greenColor);
         break;
 
       default:
-        assign(this.ribbonStyle, GitHubForkRibbon.redColor);
+        objectAssign(this.ribbonStyle, GitHubForkRibbon.redColor);
         break;
     }
   },

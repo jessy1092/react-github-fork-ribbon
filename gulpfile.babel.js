@@ -13,7 +13,7 @@ let build_path = 'dst';
 
 gulp.task('transpile', () => {
   return gulp.src(src_files)
-    .pipe(gbabel({stage: 0}))
+    .pipe(gbabel({presets: ["es2015", "react", "stage-0"]}))
     .pipe(gulp.dest('./component/'));
 });
 
