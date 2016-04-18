@@ -7,6 +7,7 @@ import source     from 'vinyl-source-stream';
 import buffer     from 'vinyl-buffer';
 import browserify from 'browserify';
 import gbabel     from 'gulp-babel';
+import globalShim from 'browserify-global-shim';
 
 let src_files = './src/*.js';
 let build_path = 'dst';
@@ -18,7 +19,11 @@ gulp.task('transpile', () => {
 });
 
 gulp.task('browserify', () => {
-  return browserify('./component/index.js')
+  return browserify('./src/index.js')
+    .transform('babelify', {presets: ['es2015', 'react', 'stage-0']})
+    .transform(globalShim.configure({
+      'react': 'React'
+    }))
     .bundle()
     .pipe(source('react-github-fork-ribbon.js'))
     .pipe(gulp.dest(build_path))
