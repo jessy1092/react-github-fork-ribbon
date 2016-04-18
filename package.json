@@ -1,7 +1,7 @@
 {
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "keywords": [
     "fork",
     "GitHub",
@@ -28,7 +28,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp dev",
-    "prepublish": "babel gulpfile.babel.js --out-file gulpfile.js && gulp transpile"
+    "prepublish": "gulp transpile"
   },
   "engines": {
     "node": ">=0.10.x"

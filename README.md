@@ -91,6 +91,11 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.4.3 - 2016/04/18
+
+- Support React 15.0
+- Browserify bundle js file for web usage.
+
 ### Version 0.4.2 - 2015/10/11
 
 - Support React 0.14
