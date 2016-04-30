@@ -91,6 +91,10 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.4.4 - 2016/04/30
+
+- Fix React 15 unitless number warning
+
 ### Version 0.4.3 - 2016/04/18
 
 - Support React 15.0

@@ -296,7 +296,7 @@ var GitHubForkRibbonWrapper = exports.GitHubForkRibbonWrapper = {
     height: '150px',
     position: 'absolute',
     overflow: 'hidden',
-    top: '0',
+    top: 0,
     zIndex: '9999',
     pointerEvents: 'none'
   },
@@ -306,25 +306,25 @@ var GitHubForkRibbonWrapper = exports.GitHubForkRibbonWrapper = {
   },
 
   leftStyle: {
-    left: '0'
+    left: 0
   },
 
   rightStyle: {
-    right: '0'
+    right: 0
   },
 
   leftBottomStyle: {
     position: 'fixed',
     top: 'inherit',
-    bottom: '0',
-    left: '0'
+    bottom: 0,
+    left: 0
   },
 
   rightBottomStyle: {
     position: 'fixed',
     top: 'inherit',
-    bottom: '0',
-    right: '0'
+    bottom: 0,
+    right: 0
   }
 };
 
