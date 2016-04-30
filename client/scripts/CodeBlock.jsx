@@ -1,7 +1,7 @@
-"use strict";
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Highlight = require('highlight.js');
+
+import React     from 'react';
+import ReactDOM  from 'react-dom';
+import Highlight from 'highlight.js';
 
 module.exports = React.createClass({
 
@@ -23,7 +23,7 @@ module.exports = React.createClass({
 
   _highlightCode: function () {
 
-    var codeNodes = ReactDOM.findDOMNode(this).querySelectorAll('pre code');
+    let codeNodes = ReactDOM.findDOMNode(this).querySelectorAll('pre code');
 
     if (codeNodes.length > 0)
     {

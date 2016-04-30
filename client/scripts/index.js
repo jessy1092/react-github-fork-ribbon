@@ -1,20 +1,16 @@
-"use strict";
 
-var $    = require('jquery');
+let $    = require('jquery');
 global.$ = global.jQuery = $;
 require('semantic-ui/dist/semantic.js');
 
-var React            = require('react');
-var ReactDOM         = require('react-dom');
-var GitHubForkRibbon = require('react-github-fork-ribbon').default;
-var CodeBlock        = require('./CodeBlock.jsx');
-var Semantify        = require('react-semantify');
+import React            from 'react';
+import ReactDOM         from 'react-dom';
+import GitHubForkRibbon from 'react-github-fork-ribbon';
+import CodeBlock        from './CodeBlock.jsx';
 
-var {Header, List, Item} = Semantify;
+import {Header, List, Item} from 'react-semantify';
 
-console.log(GitHubForkRibbon);
-
-var Index = React.createClass({
+let Index = React.createClass({
 
   render: function () {
     return (
