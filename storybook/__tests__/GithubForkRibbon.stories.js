@@ -14,6 +14,41 @@ import GitHubForkRibbon from '../../src';
 
 const stories = storiesOf('GitHub fork ribbon', module);
 
+stories.add('default with right position and red color', () => {
+	const component = (
+    <GitHubForkRibbon href="//www.google.com"
+                      target="_blank">
+      Fork me on GitHub
+    </GitHubForkRibbon>
+	);
+
+	return component;
+});
+
+stories.add('handle unexist position with default', () => {
+	const component = (
+    <GitHubForkRibbon href="//www.google.com"
+                      target="_blank"
+                      position="WOW">
+      Fork me on GitHub
+    </GitHubForkRibbon>
+	);
+
+	return component;
+});
+
+stories.add('handle unexist color with default', () => {
+	const component = (
+    <GitHubForkRibbon href="//www.google.com"
+                      target="_blank"
+                      color="Hi">
+      Fork me on GitHub
+    </GitHubForkRibbon>
+	);
+
+	return component;
+});
+
 stories.add('on right position', () => {
 	const component = (
     <GitHubForkRibbon href="//www.google.com"
