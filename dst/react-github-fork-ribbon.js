@@ -1,45 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* eslint-disable no-unused-vars */
-'use strict';
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-module.exports = Object.assign || function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (Object.getOwnPropertySymbols) {
-			symbols = Object.getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-},{}],2:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -53,96 +12,49 @@ var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _objectAssign = require('object-assign');
-
-var _objectAssign2 = _interopRequireDefault(_objectAssign);
-
 var _ribbonStyle = require('./ribbonStyle');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+var positionMapping = {
+  left: [_ribbonStyle.GitHubForkRibbon.leftStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftStyle],
+  right: [_ribbonStyle.GitHubForkRibbon.rightStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle],
+  'left-bottom': [_ribbonStyle.GitHubForkRibbon.leftBottomStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftBottomStyle],
+  'right-bottom': [_ribbonStyle.GitHubForkRibbon.rightBottomStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightBottomStyle]
+};
+
+var colorMapping = {
+  red: _ribbonStyle.GitHubForkRibbon.redColor,
+  orange: _ribbonStyle.GitHubForkRibbon.orangeColor,
+  black: _ribbonStyle.GitHubForkRibbon.blackColor,
+  green: _ribbonStyle.GitHubForkRibbon.greenColor
+};
+
 exports.default = global.GitHubForkRibbon = _react2.default.createClass({
   displayName: 'GitHubForkRibbon',
-  _setPositionStyle: function _setPositionStyle() {
-
-    this.ribbonStyle = (0, _objectAssign2.default)({}, _ribbonStyle.GitHubForkRibbon.baseStyle);
-    this.wrapperStyle = (0, _objectAssign2.default)({}, _ribbonStyle.GitHubForkRibbonWrapper.baseStyle);
-    this.ribbonPosition = '';
-
-    switch (this.props.position) {
-
-      case 'left':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.leftStyle);
-        (0, _objectAssign2.default)(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftStyle);
-        this.ribbonPosition = 'left';
-        break;
-
-      case 'right':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightStyle);
-        (0, _objectAssign2.default)(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle);
-        this.ribbonPosition = 'right';
-        break;
-
-      case 'left-bottom':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.leftBottomStyle);
-        (0, _objectAssign2.default)(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftBottomStyle);
-        this.ribbonPosition = 'left-bottom';
-        break;
-
-      case 'right-bottom':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightBottomStyle);
-        (0, _objectAssign2.default)(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightBottomStyle);
-        this.ribbonPosition = 'right-bottom';
-        break;
-
-      default:
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.rightStyle);
-        (0, _objectAssign2.default)(this.wrapperStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle);
-        this.ribbonPosition = 'right';
-        break;
-    }
-  },
-  _setColorStyle: function _setColorStyle() {
-    switch (this.props.color) {
-      case 'red':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.redColor);
-        break;
-
-      case 'orange':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.orangeColor);
-        break;
-
-      case 'black':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.blackColor);
-        break;
-
-      case 'green':
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.greenColor);
-        break;
-
-      default:
-        (0, _objectAssign2.default)(this.ribbonStyle, _ribbonStyle.GitHubForkRibbon.redColor);
-        break;
-    }
-  },
   render: function render() {
-    var _props = this.props;
-    var position = _props.position;
-    var href = _props.href;
-    var target = _props.target;
-    var color = _props.color;
+    var _props = this.props,
+        _props$position = _props.position,
+        position = _props$position === undefined ? 'right' : _props$position,
+        href = _props.href,
+        target = _props.target,
+        _props$color = _props.color,
+        color = _props$color === undefined ? 'red' : _props$color,
+        other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
 
-    var other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
+    var positionStyle = positionMapping[position] || [_ribbonStyle.GitHubForkRibbon.rightStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle];
+    var colorStyle = colorMapping[color] || _ribbonStyle.GitHubForkRibbon.redColor;
 
-    this._setPositionStyle();
-    this._setColorStyle();
+    this.ribbonStyle = _extends({}, _ribbonStyle.GitHubForkRibbon.baseStyle, positionStyle[0], colorStyle);
+
+    this.wrapperStyle = _extends({}, _ribbonStyle.GitHubForkRibbonWrapper.baseStyle, positionStyle[1]);
 
     return _react2.default.createElement(
       'div',
       _extends({}, other, {
-        className: "github-fork-ribbon-wrapper " + this.ribbonPosition,
+        className: 'github-fork-ribbon-wrapper ' + position,
         style: this.wrapperStyle }),
       _react2.default.createElement(
         'div',
@@ -161,7 +73,7 @@ exports.default = global.GitHubForkRibbon = _react2.default.createClass({
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./ribbonStyle":3,"object-assign":1}],3:[function(require,module,exports){
+},{"./ribbonStyle":2}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -328,4 +240,4 @@ var GitHubForkRibbonWrapper = exports.GitHubForkRibbonWrapper = {
   }
 };
 
-},{}]},{},[2]);
+},{}]},{},[1]);

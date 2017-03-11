@@ -91,6 +91,12 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.4.5 - 2017/03/11
+
+- Refactor position and color set function
+- Remove object-assign library
+- Use storybook to help develop
+
 ### Version 0.4.4 - 2016/04/30
 
 - Fix React 15 unitless number warning
