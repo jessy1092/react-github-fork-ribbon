@@ -14,13 +14,13 @@ let build_path = 'dst';
 
 gulp.task('transpile', () => {
   return gulp.src(src_files)
-    .pipe(gbabel({presets: ["es2015", "react", "stage-0"]}))
+    .pipe(gbabel({presets: ["es2015", "react", "stage-3"]}))
     .pipe(gulp.dest('./component/'));
 });
 
 gulp.task('browserify', () => {
   return browserify('./src/index.js')
-    .transform('babelify', {presets: ['es2015', 'react', 'stage-0']})
+    .transform('babelify', {presets: ['es2015', 'react', 'stage-3']})
     .transform(globalShim.configure({
       'react': 'React'
     }))
