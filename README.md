@@ -4,9 +4,9 @@ React GitHub Fork Ribbon
 
 Pure inline style github fork ribbon on React component. The inline style css is from ["Fork me on GitHub" CSS ribbon](http://simonwhitaker.github.io/github-fork-ribbon-css/).
 
-|         | React = 0.12 | React >= 0.13 |
-| ------- | ------------ | ------------- |
-| Version | <= 0.2       | >= 0.3        |
+|         | React = 0.12 | React = 0.13  | React >= 0.14 |
+| ------- | ------------ | ------------- | ------------- |
+| Version | <= 0.2       | >= 0.3 < 0.5  | >= 0.5        |
 
 ## Usage
 
@@ -14,50 +14,21 @@ Pure inline style github fork ribbon on React component. The inline style css is
 npm install react-github-fork-ribbon
 ```
 
-Ex. React 0.14
+Ex. React 15.5
 ```js
-var React            = require('react');
-var ReactDOM         = require('react-dom');
-var GitHubForkRibbon = require('react-github-fork-ribbon');
+import React            from 'react';
+import ReactDOM         from 'react-dom';
+import GitHubForkRibbon from 'react-github-fork-ribbon';
 
-var Content = React.createClass({
-
-  render: function () {
-    return (
-      <GitHubForkRibbon href="//www.google.com"
-                        target="_blank"
-                        position="right">
-        Fork me on GitHub
-      </GitHubForkRibbon>
-    );
-  }
-});
+const Content = () => (
+  <GitHubForkRibbon href="//www.google.com"
+                    target="_blank"
+                    position="right">
+    Fork me on GitHub
+  </GitHubForkRibbon>
+);
 
 ReactDOM.render(
-  <Content />,
-  document.getElementById('content')
-);
-```
-
-Ex. React 0.13
-```js
-var React            = require('react');
-var GitHubForkRibbon = require('react-github-fork-ribbon');
-
-var Content = React.createClass({
-
-  render: function () {
-    return (
-      <GitHubForkRibbon href="//www.google.com"
-                        target="_blank"
-                        position="right">
-        Fork me on GitHub
-      </GitHubForkRibbon>
-    );
-  }
-});
-
-React.render(
   <Content />,
   document.getElementById('content')
 );
@@ -90,6 +61,12 @@ It has four color.
 - `green`
 
 ## Release Notes
+
+### Version 0.5.0 - 2017/04/11
+
+- Drop react 0.13 support
+- Support react 15.5 for preparing upgrade to react 16
+- Add jest for snapshot testing
 
 ### Version 0.4.5 - 2017/03/11
 
@@ -148,7 +125,7 @@ It has four color.
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Lee  < jessy1092@gmail.com >
+Copyright (c) 2015-2017 Lee  < jessy1092@gmail.com >
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

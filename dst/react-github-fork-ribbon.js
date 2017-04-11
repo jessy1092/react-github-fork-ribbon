@@ -19,58 +19,61 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var positionMapping = {
-  left: [_ribbonStyle.GitHubForkRibbon.leftStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftStyle],
-  right: [_ribbonStyle.GitHubForkRibbon.rightStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle],
-  'left-bottom': [_ribbonStyle.GitHubForkRibbon.leftBottomStyle, _ribbonStyle.GitHubForkRibbonWrapper.leftBottomStyle],
-  'right-bottom': [_ribbonStyle.GitHubForkRibbon.rightBottomStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightBottomStyle]
+  left: [_ribbonStyle.RibbonStyle.leftStyle, _ribbonStyle.RibbonStyleWrapper.leftStyle],
+  right: [_ribbonStyle.RibbonStyle.rightStyle, _ribbonStyle.RibbonStyleWrapper.rightStyle],
+  'left-bottom': [_ribbonStyle.RibbonStyle.leftBottomStyle, _ribbonStyle.RibbonStyleWrapper.leftBottomStyle],
+  'right-bottom': [_ribbonStyle.RibbonStyle.rightBottomStyle, _ribbonStyle.RibbonStyleWrapper.rightBottomStyle]
 };
 
 var colorMapping = {
-  red: _ribbonStyle.GitHubForkRibbon.redColor,
-  orange: _ribbonStyle.GitHubForkRibbon.orangeColor,
-  black: _ribbonStyle.GitHubForkRibbon.blackColor,
-  green: _ribbonStyle.GitHubForkRibbon.greenColor
+  red: _ribbonStyle.RibbonStyle.redColor,
+  orange: _ribbonStyle.RibbonStyle.orangeColor,
+  black: _ribbonStyle.RibbonStyle.blackColor,
+  green: _ribbonStyle.RibbonStyle.greenColor
 };
 
-exports.default = global.GitHubForkRibbon = _react2.default.createClass({
-  displayName: 'GitHubForkRibbon',
-  render: function render() {
-    var _props = this.props,
-        _props$position = _props.position,
-        position = _props$position === undefined ? 'right' : _props$position,
-        href = _props.href,
-        target = _props.target,
-        _props$color = _props.color,
-        color = _props$color === undefined ? 'red' : _props$color,
-        other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
+var GitHubForkRibbon = function GitHubForkRibbon() {
+  var _props = undefined.props,
+      _props$position = _props.position,
+      position = _props$position === undefined ? 'right' : _props$position,
+      href = _props.href,
+      target = _props.target,
+      _props$color = _props.color,
+      color = _props$color === undefined ? 'red' : _props$color,
+      other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
 
-    var positionStyle = positionMapping[position] || [_ribbonStyle.GitHubForkRibbon.rightStyle, _ribbonStyle.GitHubForkRibbonWrapper.rightStyle];
-    var colorStyle = colorMapping[color] || _ribbonStyle.GitHubForkRibbon.redColor;
+  var positionStyle = positionMapping[position] || [_ribbonStyle.RibbonStyle.rightStyle, _ribbonStyle.RibbonStyleWrapper.rightStyle];
+  var colorStyle = colorMapping[color] || _ribbonStyle.RibbonStyle.redColor;
 
-    this.ribbonStyle = _extends({}, _ribbonStyle.GitHubForkRibbon.baseStyle, positionStyle[0], colorStyle);
-
-    this.wrapperStyle = _extends({}, _ribbonStyle.GitHubForkRibbonWrapper.baseStyle, positionStyle[1]);
-
-    return _react2.default.createElement(
-      'div',
-      _extends({}, other, {
-        className: 'github-fork-ribbon-wrapper ' + position,
-        style: this.wrapperStyle }),
-      _react2.default.createElement(
-        'div',
-        { className: 'github-fork-ribbon',
-          style: this.ribbonStyle },
-        _react2.default.createElement(
-          'a',
-          { href: href,
-            target: target,
-            style: _ribbonStyle.GitHubForkRibbon.urlStyle },
-          this.props.children
-        )
-      )
-    );
+  if (positionStyle[0] === _ribbonStyle.RibbonStyle.rightStyle) {
+    position = 'right';
   }
-});
+
+  undefined.ribbonStyle = _extends({}, _ribbonStyle.RibbonStyle.baseStyle, positionStyle[0], colorStyle);
+
+  undefined.wrapperStyle = _extends({}, _ribbonStyle.RibbonStyleWrapper.baseStyle, positionStyle[1]);
+
+  return _react2.default.createElement(
+    'div',
+    _extends({}, other, {
+      className: 'github-fork-ribbon-wrapper ' + position,
+      style: undefined.wrapperStyle }),
+    _react2.default.createElement(
+      'div',
+      { className: 'github-fork-ribbon',
+        style: undefined.ribbonStyle },
+      _react2.default.createElement(
+        'a',
+        { href: href,
+          target: target,
+          style: _ribbonStyle.RibbonStyle.urlStyle },
+        undefined.props.children
+      )
+    )
+  );
+};
+
+exports.default = global.RibbonStyle = GitHubForkRibbon;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./ribbonStyle":2}],2:[function(require,module,exports){
