@@ -4,7 +4,7 @@
 *
 * 20150116 Lee: use css source for inline style react component.
 */
-export const GitHubForkRibbon = {
+export const RibbonStyle = {
 
   baseStyle: {
     /* The right and left classes determine the side we attach our banner to */
@@ -120,7 +120,7 @@ export const GitHubForkRibbon = {
   }
 };
 
-export const GitHubForkRibbonWrapper = {
+export const RibbonStyleWrapper = {
 
   baseStyle: {
     width: '150px',

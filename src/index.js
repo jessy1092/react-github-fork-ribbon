@@ -1,45 +1,45 @@
 import React from 'react';
 
 import {
-  GitHubForkRibbon,
-  GitHubForkRibbonWrapper
+  RibbonStyle,
+  RibbonStyleWrapper
 } from './ribbonStyle';
 
 const positionMapping = {
-  left: [GitHubForkRibbon.leftStyle, GitHubForkRibbonWrapper.leftStyle],
-  right: [GitHubForkRibbon.rightStyle, GitHubForkRibbonWrapper.rightStyle],
-  'left-bottom': [GitHubForkRibbon.leftBottomStyle, GitHubForkRibbonWrapper.leftBottomStyle],
-  'right-bottom': [GitHubForkRibbon.rightBottomStyle, GitHubForkRibbonWrapper.rightBottomStyle],
+  left: [RibbonStyle.leftStyle, RibbonStyleWrapper.leftStyle],
+  right: [RibbonStyle.rightStyle, RibbonStyleWrapper.rightStyle],
+  'left-bottom': [RibbonStyle.leftBottomStyle, RibbonStyleWrapper.leftBottomStyle],
+  'right-bottom': [RibbonStyle.rightBottomStyle, RibbonStyleWrapper.rightBottomStyle],
 };
 
 const colorMapping = {
-  red: GitHubForkRibbon.redColor,
-  orange: GitHubForkRibbon.orangeColor,
-  black: GitHubForkRibbon.blackColor,
-  green: GitHubForkRibbon.greenColor,
+  red: RibbonStyle.redColor,
+  orange: RibbonStyle.orangeColor,
+  black: RibbonStyle.blackColor,
+  green: RibbonStyle.greenColor,
 };
 
-export default global.GitHubForkRibbon = React.createClass({
+export default global.RibbonStyle = React.createClass({
 
   render() {
 
     let {position = 'right', href, target, color = 'red', ...other} = this.props;
 
-    const positionStyle = positionMapping[position] || [GitHubForkRibbon.rightStyle, GitHubForkRibbonWrapper.rightStyle];
-    const colorStyle = colorMapping[color] || GitHubForkRibbon.redColor;
+    const positionStyle = positionMapping[position] || [RibbonStyle.rightStyle, RibbonStyleWrapper.rightStyle];
+    const colorStyle = colorMapping[color] || RibbonStyle.redColor;
 
-    if (positionStyle[0] === GitHubForkRibbon.rightStyle) {
+    if (positionStyle[0] === RibbonStyle.rightStyle) {
       position = 'right';
     }
 
     this.ribbonStyle = {
-      ...GitHubForkRibbon.baseStyle,
+      ...RibbonStyle.baseStyle,
       ...positionStyle[0],
       ...colorStyle
     };
 
     this.wrapperStyle = {
-      ...GitHubForkRibbonWrapper.baseStyle,
+      ...RibbonStyleWrapper.baseStyle,
       ...positionStyle[1],
     };
 
@@ -51,7 +51,7 @@ export default global.GitHubForkRibbon = React.createClass({
              style={this.ribbonStyle}>
           <a href={href}
              target={target}
-             style={GitHubForkRibbon.urlStyle}>
+             style={RibbonStyle.urlStyle}>
             {this.props.children}
           </a>
         </div>
