@@ -19,43 +19,40 @@ const colorMapping = {
   green: RibbonStyle.greenColor,
 };
 
-export default global.RibbonStyle = React.createClass({
+const GitHubForkRibbon = ({position = 'right', href, target, color = 'red', children, ...other}) => {
 
-  render() {
+  const positionStyle = positionMapping[position] || [RibbonStyle.rightStyle, RibbonStyleWrapper.rightStyle];
+  const colorStyle = colorMapping[color] || RibbonStyle.redColor;
 
-    let {position = 'right', href, target, color = 'red', ...other} = this.props;
-
-    const positionStyle = positionMapping[position] || [RibbonStyle.rightStyle, RibbonStyleWrapper.rightStyle];
-    const colorStyle = colorMapping[color] || RibbonStyle.redColor;
-
-    if (positionStyle[0] === RibbonStyle.rightStyle) {
-      position = 'right';
-    }
-
-    this.ribbonStyle = {
-      ...RibbonStyle.baseStyle,
-      ...positionStyle[0],
-      ...colorStyle
-    };
-
-    this.wrapperStyle = {
-      ...RibbonStyleWrapper.baseStyle,
-      ...positionStyle[1],
-    };
-
-    return (
-      <div {...other}
-           className={`github-fork-ribbon-wrapper ${position}`}
-           style={this.wrapperStyle}>
-        <div className="github-fork-ribbon"
-             style={this.ribbonStyle}>
-          <a href={href}
-             target={target}
-             style={RibbonStyle.urlStyle}>
-            {this.props.children}
-          </a>
-        </div>
-      </div>
-    )
+  if (positionStyle[0] === RibbonStyle.rightStyle) {
+    position = 'right';
   }
-});
+
+  const ribbonStyle = {
+    ...RibbonStyle.baseStyle,
+    ...positionStyle[0],
+    ...colorStyle
+  };
+
+  const wrapperStyle = {
+    ...RibbonStyleWrapper.baseStyle,
+    ...positionStyle[1],
+  };
+
+  return (
+    <div {...other}
+         className={`github-fork-ribbon-wrapper ${position}`}
+         style={wrapperStyle}>
+      <div className="github-fork-ribbon"
+           style={ribbonStyle}>
+        <a href={href}
+           target={target}
+           style={RibbonStyle.urlStyle}>
+          {children}
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default global.RibbonStyle = GitHubForkRibbon;
