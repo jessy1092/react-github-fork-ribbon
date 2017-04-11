@@ -1,5 +1,7 @@
 
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+
+export const expect = require('jest-matchers'); // eslint-disable-line global-require
 
 export const action = () => () => {};
 
@@ -20,13 +22,12 @@ export const after = () => {};
 export const before = () => {};
 
 export const snapshot = (name, func) => {
-	it(name, () => func(expect));
+	it(name, () => func());
 };
 
 const createSnapshot = (name, story) => {
 	it(name, () => {
-		const tree = renderer.create(story).toJSON();
-		expect(tree).toMatchSnapshot();
+		expect(shallow(story)).toMatchSnapshot();
 	});
 };
 

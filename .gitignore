@@ -8,3 +8,6 @@ component/
 
 # gulpfile is transpile from gulpfile.babel.js
 gulpfile.js
+
+# test
+coverage/

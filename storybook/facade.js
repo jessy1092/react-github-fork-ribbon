@@ -18,6 +18,8 @@ import {
 	xdescribe as xdescribeReal,
 } from 'storybook-addon-specifications';
 
+export const expect = require('expect'); // eslint-disable-line global-require
+
 export const storiesOf = storiesOfReal;
 export const action = actionReal;
 export const linkTo = linkToReal;
