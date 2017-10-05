@@ -1,2 +1,3 @@
 import 'storybook-addon-specifications/register';
-import '@kadira/storybook/addons';
+import '@storybook/addon-actions/register';
+import '@storybook/addon-links/register';
