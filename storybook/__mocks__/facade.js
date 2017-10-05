@@ -1,14 +1,16 @@
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-import { shallow } from 'enzyme';
+Enzyme.configure({ adapter: new Adapter() });
 
-export const expect = require('jest-matchers'); // eslint-disable-line global-require
+const { shallow } = Enzyme;
 
 export const action = () => () => {};
 
 export const linkTo = () => {};
 
 export const specs = spec => {
-	spec();
+  spec();
 };
 
 export const describe = jasmine.currentEnv_.describe;
@@ -22,27 +24,27 @@ export const after = () => {};
 export const before = () => {};
 
 export const snapshot = (name, func) => {
-	it(name, () => func());
+  it(name, () => func());
 };
 
 const createSnapshot = (name, story) => {
-	it(name, () => {
-		expect(shallow(story)).toMatchSnapshot();
-	});
+  it(name, () => {
+    expect(shallow(story)).toMatchSnapshot();
+  });
 };
 
 export const storiesOf = function storiesOf() {
-	const api = {};
-	let story;
-	api.add = (name, func) => {
-		story = func();
-		createSnapshot(name, story);
-		return api;
-	};
-	api.addWithInfo = (name, func) => {
-		story = func();
-		createSnapshot(name, story);
-		return api;
-	};
-	return api;
+  const api = {};
+  let story;
+  api.add = (name, func) => {
+    story = func();
+    createSnapshot(name, story);
+    return api;
+  };
+  api.addWithInfo = (name, func) => {
+    story = func();
+    createSnapshot(name, story);
+    return api;
+  };
+  return api;
 };

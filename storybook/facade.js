@@ -1,21 +1,20 @@
+import { storiesOf as storiesOfReal } from '@storybook/react';
+
+import { action as actionReal } from '@storybook/addon-actions';
+
+import { linkTo as linkToReal } from '@storybook/addon-links';
 
 import {
-	storiesOf as storiesOfReal,
-    action as actionReal,
-	linkTo as linkToReal,
-} from '@kadira/storybook';
-
-import {
-	specs as specsReal,
-	describe as describeReal,
-	it as itReal,
-	beforeEach as beforeEachReal,
-	before as beforeReal,
-	after as afterReal,
-	afterEach as afterEachReal,
-	xit as xitReal,
-	fit as fitReal,
-	xdescribe as xdescribeReal,
+  specs as specsReal,
+  describe as describeReal,
+  it as itReal,
+  beforeEach as beforeEachReal,
+  before as beforeReal,
+  after as afterReal,
+  afterEach as afterEachReal,
+  xit as xitReal,
+  fit as fitReal,
+  xdescribe as xdescribeReal,
 } from 'storybook-addon-specifications';
 
 export const expect = require('expect'); // eslint-disable-line global-require
