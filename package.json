@@ -1,14 +1,8 @@
 {
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
-  "version": "0.5.0",
-  "keywords": [
-    "fork",
-    "GitHub",
-    "ribbon",
-    "react",
-    "react-component"
-  ],
+  "version": "0.5.1",
+  "keywords": ["fork", "GitHub", "ribbon", "react", "react-component"],
   "contributor": [
     {
       "name": "Lee",
@@ -70,13 +64,8 @@
   },
   "dependencies": {},
   "jest": {
-    "setupFiles": [
-      "<rootDir>/storybook/__conf__/mockConfig.js"
-    ],
-    "testMatch": [
-      "**/storybook/**/*.stories.js",
-      "**/src/**/*.spec.js"
-    ],
+    "setupFiles": ["<rootDir>/storybook/__conf__/mockConfig.js"],
+    "testMatch": ["**/storybook/**/*.stories.js", "**/src/**/*.spec.js"],
     "automock": false,
     "globals": {
       "__TESTS__": true
@@ -88,15 +77,11 @@
       "<rootDir>/node_modules/react-addons-test-utils/"
     ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/storybook/__mocks__/file.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/storybook/__mocks__/file.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/storybook/",
-      "<rootDir>/node_modules/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "coveragePathIgnorePatterns": ["<rootDir>/storybook/", "<rootDir>/node_modules/"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

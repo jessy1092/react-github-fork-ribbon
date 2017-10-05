@@ -32,15 +32,15 @@ var colorMapping = {
   green: _ribbonStyle.RibbonStyle.greenColor
 };
 
-var GitHubForkRibbon = function GitHubForkRibbon() {
-  var _props = undefined.props,
-      _props$position = _props.position,
-      position = _props$position === undefined ? 'right' : _props$position,
-      href = _props.href,
-      target = _props.target,
-      _props$color = _props.color,
-      color = _props$color === undefined ? 'red' : _props$color,
-      other = _objectWithoutProperties(_props, ['position', 'href', 'target', 'color']);
+var GitHubForkRibbon = function GitHubForkRibbon(_ref) {
+  var _ref$position = _ref.position,
+      position = _ref$position === undefined ? 'right' : _ref$position,
+      href = _ref.href,
+      target = _ref.target,
+      _ref$color = _ref.color,
+      color = _ref$color === undefined ? 'red' : _ref$color,
+      children = _ref.children,
+      other = _objectWithoutProperties(_ref, ['position', 'href', 'target', 'color', 'children']);
 
   var positionStyle = positionMapping[position] || [_ribbonStyle.RibbonStyle.rightStyle, _ribbonStyle.RibbonStyleWrapper.rightStyle];
   var colorStyle = colorMapping[color] || _ribbonStyle.RibbonStyle.redColor;
@@ -49,25 +49,25 @@ var GitHubForkRibbon = function GitHubForkRibbon() {
     position = 'right';
   }
 
-  undefined.ribbonStyle = _extends({}, _ribbonStyle.RibbonStyle.baseStyle, positionStyle[0], colorStyle);
+  var ribbonStyle = _extends({}, _ribbonStyle.RibbonStyle.baseStyle, positionStyle[0], colorStyle);
 
-  undefined.wrapperStyle = _extends({}, _ribbonStyle.RibbonStyleWrapper.baseStyle, positionStyle[1]);
+  var wrapperStyle = _extends({}, _ribbonStyle.RibbonStyleWrapper.baseStyle, positionStyle[1]);
 
   return _react2.default.createElement(
     'div',
     _extends({}, other, {
       className: 'github-fork-ribbon-wrapper ' + position,
-      style: undefined.wrapperStyle }),
+      style: wrapperStyle }),
     _react2.default.createElement(
       'div',
       { className: 'github-fork-ribbon',
-        style: undefined.ribbonStyle },
+        style: ribbonStyle },
       _react2.default.createElement(
         'a',
         { href: href,
           target: target,
           style: _ribbonStyle.RibbonStyle.urlStyle },
-        undefined.props.children
+        children
       )
     )
   );
@@ -88,7 +88,7 @@ Object.defineProperty(exports, "__esModule", {
 *
 * 20150116 Lee: use css source for inline style react component.
 */
-var GitHubForkRibbon = exports.GitHubForkRibbon = {
+var RibbonStyle = exports.RibbonStyle = {
 
   baseStyle: {
     /* The right and left classes determine the side we attach our banner to */
@@ -204,7 +204,7 @@ var GitHubForkRibbon = exports.GitHubForkRibbon = {
   }
 };
 
-var GitHubForkRibbonWrapper = exports.GitHubForkRibbonWrapper = {
+var RibbonStyleWrapper = exports.RibbonStyleWrapper = {
 
   baseStyle: {
     width: '150px',

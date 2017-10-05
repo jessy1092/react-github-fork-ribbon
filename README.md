@@ -62,6 +62,11 @@ It has four color.
 
 ## Release Notes
 
+### Version 0.5.1 - 2017/10/05
+
+- Support react 16 
+- Upgrade development environment
+
 ### Version 0.5.0 - 2017/04/11
 
 - Drop react 0.13 support
