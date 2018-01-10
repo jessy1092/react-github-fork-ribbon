@@ -54,7 +54,7 @@ export const RibbonStyle = {
 
     /* Add "stitching" effect */
     borderWidth: '1px 0',
-    borderStyle: 'dotted',
+    borderStyle: 'dashed',
     // borderColor: '#fff',
     borderColor: 'rgba(255, 255, 255, 0.7)'
   },
