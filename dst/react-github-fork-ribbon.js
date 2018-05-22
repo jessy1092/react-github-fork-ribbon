@@ -39,8 +39,9 @@ var GitHubForkRibbon = function GitHubForkRibbon(_ref) {
       target = _ref.target,
       _ref$color = _ref.color,
       color = _ref$color === undefined ? 'red' : _ref$color,
+      className = _ref.className,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ['position', 'href', 'target', 'color', 'children']);
+      other = _objectWithoutProperties(_ref, ['position', 'href', 'target', 'color', 'className', 'children']);
 
   var positionStyle = positionMapping[position] || [_ribbonStyle.RibbonStyle.rightStyle, _ribbonStyle.RibbonStyleWrapper.rightStyle];
   var colorStyle = colorMapping[color] || _ribbonStyle.RibbonStyle.redColor;
@@ -56,7 +57,7 @@ var GitHubForkRibbon = function GitHubForkRibbon(_ref) {
   return _react2.default.createElement(
     'div',
     _extends({}, other, {
-      className: 'github-fork-ribbon-wrapper ' + position,
+      className: 'github-fork-ribbon-wrapper ' + position + ' ' + className,
       style: wrapperStyle }),
     _react2.default.createElement(
       'div',
@@ -138,7 +139,7 @@ var RibbonStyle = exports.RibbonStyle = {
 
     /* Add "stitching" effect */
     borderWidth: '1px 0',
-    borderStyle: 'dotted',
+    borderStyle: 'dashed',
     // borderColor: '#fff',
     borderColor: 'rgba(255, 255, 255, 0.7)'
   },

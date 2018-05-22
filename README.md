@@ -60,6 +60,10 @@ It has four color.
 - `black`
 - `green`
 
+#### className
+
+It would be an html tag's attribute `class`.
+
 ## Release Notes
 
 ### Version 0.5.1 - 2017/10/05

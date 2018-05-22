@@ -19,7 +19,7 @@ const colorMapping = {
   green: RibbonStyle.greenColor,
 };
 
-const GitHubForkRibbon = ({position = 'right', href, target, color = 'red', children, ...other}) => {
+const GitHubForkRibbon = ({position = 'right', href, target, color = 'red', className = '', children, ...other}) => {
 
   const positionStyle = positionMapping[position] || [RibbonStyle.rightStyle, RibbonStyleWrapper.rightStyle];
   const colorStyle = colorMapping[color] || RibbonStyle.redColor;
@@ -41,7 +41,7 @@ const GitHubForkRibbon = ({position = 'right', href, target, color = 'red', chil
 
   return (
     <div {...other}
-         className={`github-fork-ribbon-wrapper ${position}`}
+         className={`github-fork-ribbon-wrapper ${position} ${className}`}
          style={wrapperStyle}>
       <div className="github-fork-ribbon"
            style={ribbonStyle}>

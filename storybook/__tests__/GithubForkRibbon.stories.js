@@ -108,3 +108,25 @@ storiesOf('GitHub fork ribbon/color', module)
 
     return component;
   });
+
+storiesOf('GitHub fork ribbon/className', module)
+  .add('hidden on small devices up to 576px', () => {
+    const component = (
+      <div>
+        <style>
+        {`
+          @media (max-width: 576px) {
+            .custom-class {
+              display: none;
+            }
+          }
+        `}
+        </style>
+        <GitHubForkRibbon href="//www.google.com" target="_blank" className="custom-class">
+          Fork me on GitHub
+        </GitHubForkRibbon>
+      </div>
+    );
+
+    return component;
+  });
