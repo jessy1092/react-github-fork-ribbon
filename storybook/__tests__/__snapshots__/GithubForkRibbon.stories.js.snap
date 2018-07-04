@@ -42,6 +42,7 @@ exports[`default with right position and red color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -107,6 +108,7 @@ exports[`handle unexist color with default 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -172,6 +174,7 @@ exports[`handle unexist position with default 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -258,6 +261,7 @@ exports[`on left position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -324,6 +328,7 @@ exports[`on left-bottom position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -389,6 +394,7 @@ exports[`on right position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -455,6 +461,7 @@ exports[`on right-bottom position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -520,6 +527,7 @@ exports[`with black color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -585,6 +593,7 @@ exports[`with green color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -650,6 +659,7 @@ exports[`with orange color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
@@ -715,6 +725,7 @@ exports[`with red color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",

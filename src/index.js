@@ -47,7 +47,8 @@ const GitHubForkRibbon = ({position = 'right', href, target, color = 'red', clas
            style={ribbonStyle}>
         <a href={href}
            target={target}
-           style={RibbonStyle.urlStyle}>
+           style={RibbonStyle.urlStyle}
+           rel="noopener">
           {children}
         </a>
       </div>
