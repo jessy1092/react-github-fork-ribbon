@@ -94,6 +94,9 @@ let Index = React.createClass({
             <Item>green</Item>
           </List>
 
+          <Header className="medium">className</Header>
+          <p>{"It would be an html tag's attribute `class`."}</p>
+
           <p>If you want to know more detail, you can see this website <a href="//github.com/jessy1092/react-github-fork-ribbon/tree/website" target="_blank">
              source code</a>.</p>
 
