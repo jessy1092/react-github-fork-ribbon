@@ -66,60 +66,7 @@ It would be an html tag's attribute `class`.
 
 ## Release Notes
 
-### Version 0.5.1 - 2017/10/05
-
-- Support react 16 
-- Upgrade development environment
-
-### Version 0.5.0 - 2017/04/11
-
-- Drop react 0.13 support
-- Support react 15.5 for preparing upgrade to react 16
-- Add jest for snapshot testing
-
-### Version 0.4.5 - 2017/03/11
-
-- Refactor position and color set function
-- Remove object-assign library
-- Use storybook to help develop
-
-### Version 0.4.4 - 2016/04/30
-
-- Fix React 15 unitless number warning
-
-### Version 0.4.3 - 2016/04/18
-
-- Support React 15.0
-- Browserify bundle js file for web usage.
-
-### Version 0.4.2 - 2015/10/11
-
-- Support React 0.14
-
-### Version 0.4.1 - 2015/06/29
-
-- Insert the relevant browser prefix.
-  + Webkit, Moz, O, ms.
-
-### Version 0.4.0 - 2015/06/28
-
-- Switch to vanilla inline styles. [PR#7](https://github.com/jessy1092/react-github-fork-ribbon/pull/7)
-- Update Dev-dependencies version. `babel` => 5.6.14, `browserify` => 10.2.4
-
-### Version 0.3.0 - 2015/03/28
-
-- Support `react` 0.13.x and `react-style` 0.5.x version
-- Use ES6 feature.
-
-### Version 0.2.0 - 2015/03/07
-
-- Add attribute: `color`
-- Transpile into vanilla js during prepublish.
-
-### Version 0.1.0 - 2015/01/16
-
-- Init
-- Add attribute: `href`, `target`, `position`
+see [CHANGELOG.md](https://github.com/jessy1092/react-github-fork-ribbon/blob/master/CHANGELOG.md)
 
 ## Contribute
 [![devDependency Status][david-dm-dev-image]][david-dm-dev-url]
