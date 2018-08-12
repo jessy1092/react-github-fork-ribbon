@@ -2,19 +2,23 @@
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
   "version": "0.5.1",
-  "keywords": ["fork", "GitHub", "ribbon", "react", "react-component"],
+  "keywords": [
+    "fork",
+    "GitHub",
+    "ribbon",
+    "react",
+    "react-component"
+  ],
   "contributor": [
     {
       "name": "Lee",
       "email": "jessy1092@gmail.com"
     }
   ],
-  "repository": [
-    {
-      "type": "git",
-      "url": "https://github.com/jessy1092/react-github-fork-ribbon"
-    }
-  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessy1092/react-github-fork-ribbon"
+  },
   "bugs": {
     "url": "https://github.com/jessy1092/react-github-fork-ribbon/issues"
   },
@@ -37,6 +41,7 @@
     "@storybook/react": "^3.2.12",
     "babel": "^6.5.2",
     "babel-core": "^6.24.1",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -53,7 +58,7 @@
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.6",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^21.2.1",
+    "jest": "^23.5.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "3.0.0-beta.6",
@@ -64,8 +69,13 @@
   },
   "dependencies": {},
   "jest": {
-    "setupFiles": ["<rootDir>/storybook/__conf__/mockConfig.js"],
-    "testMatch": ["**/storybook/**/*.stories.js", "**/src/**/*.spec.js"],
+    "setupFiles": [
+      "<rootDir>/storybook/__conf__/mockConfig.js"
+    ],
+    "testMatch": [
+      "**/storybook/**/*.stories.js",
+      "**/src/**/*.spec.js"
+    ],
     "automock": false,
     "globals": {
       "__TESTS__": true
@@ -77,11 +87,15 @@
       "<rootDir>/node_modules/react-addons-test-utils/"
     ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/storybook/__mocks__/file.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/storybook/__mocks__/file.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "coveragePathIgnorePatterns": ["<rootDir>/storybook/", "<rootDir>/node_modules/"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/storybook/",
+      "<rootDir>/node_modules/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
