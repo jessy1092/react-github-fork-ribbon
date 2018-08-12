@@ -2,7 +2,7 @@
 
 exports[`default with right position and red color 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -42,10 +42,11 @@ exports[`default with right position and red color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -67,7 +68,7 @@ exports[`default with right position and red color 1`] = `
 
 exports[`handle unexist color with default 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -107,10 +108,11 @@ exports[`handle unexist color with default 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -132,7 +134,7 @@ exports[`handle unexist color with default 1`] = `
 
 exports[`handle unexist position with default 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -172,10 +174,11 @@ exports[`handle unexist position with default 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -195,9 +198,30 @@ exports[`handle unexist position with default 1`] = `
 </div>
 `;
 
+exports[`hidden on small devices up to 576px 1`] = `
+<div>
+  <style>
+    
+          @media (max-width: 576px) {
+            .custom-class {
+              display: none;
+            }
+          }
+        
+  </style>
+  <GitHubForkRibbon
+    className="custom-class"
+    href="//www.google.com"
+    target="_blank"
+  >
+    Fork me on GitHub
+  </GitHubForkRibbon>
+</div>
+`;
+
 exports[`on left position 1`] = `
 <div
-  className="github-fork-ribbon-wrapper left"
+  className="github-fork-ribbon-wrapper left "
   style={
     Object {
       "height": "150px",
@@ -237,10 +261,11 @@ exports[`on left position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -262,7 +287,7 @@ exports[`on left position 1`] = `
 
 exports[`on left-bottom position 1`] = `
 <div
-  className="github-fork-ribbon-wrapper left-bottom"
+  className="github-fork-ribbon-wrapper left-bottom "
   style={
     Object {
       "bottom": 0,
@@ -303,10 +328,11 @@ exports[`on left-bottom position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -328,7 +354,7 @@ exports[`on left-bottom position 1`] = `
 
 exports[`on right position 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -368,10 +394,11 @@ exports[`on right position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -393,7 +420,7 @@ exports[`on right position 1`] = `
 
 exports[`on right-bottom position 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right-bottom"
+  className="github-fork-ribbon-wrapper right-bottom "
   style={
     Object {
       "bottom": 0,
@@ -434,10 +461,11 @@ exports[`on right-bottom position 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -459,7 +487,7 @@ exports[`on right-bottom position 1`] = `
 
 exports[`with black color 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -499,10 +527,11 @@ exports[`with black color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -524,7 +553,7 @@ exports[`with black color 1`] = `
 
 exports[`with green color 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -564,10 +593,11 @@ exports[`with green color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -589,7 +619,7 @@ exports[`with green color 1`] = `
 
 exports[`with orange color 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -629,10 +659,11 @@ exports[`with orange color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
@@ -654,7 +685,7 @@ exports[`with orange color 1`] = `
 
 exports[`with red color 1`] = `
 <div
-  className="github-fork-ribbon-wrapper right"
+  className="github-fork-ribbon-wrapper right "
   style={
     Object {
       "height": "150px",
@@ -694,10 +725,11 @@ exports[`with red color 1`] = `
   >
     <a
       href="//www.google.com"
+      rel="noopener"
       style={
         Object {
           "borderColor": "rgba(255, 255, 255, 0.7)",
-          "borderStyle": "dotted",
+          "borderStyle": "dashed",
           "borderWidth": "1px 0",
           "color": "#fff",
           "display": "inline-block",
