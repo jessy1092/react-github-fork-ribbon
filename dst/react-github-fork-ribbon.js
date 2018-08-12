@@ -39,7 +39,8 @@ var GitHubForkRibbon = function GitHubForkRibbon(_ref) {
       target = _ref.target,
       _ref$color = _ref.color,
       color = _ref$color === undefined ? 'red' : _ref$color,
-      className = _ref.className,
+      _ref$className = _ref.className,
+      className = _ref$className === undefined ? '' : _ref$className,
       children = _ref.children,
       other = _objectWithoutProperties(_ref, ['position', 'href', 'target', 'color', 'className', 'children']);
 
@@ -67,7 +68,8 @@ var GitHubForkRibbon = function GitHubForkRibbon(_ref) {
         'a',
         { href: href,
           target: target,
-          style: _ribbonStyle.RibbonStyle.urlStyle },
+          style: _ribbonStyle.RibbonStyle.urlStyle,
+          rel: 'noopener' },
         children
       )
     )

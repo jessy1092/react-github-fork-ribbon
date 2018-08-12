@@ -1,7 +1,7 @@
 {
   "name": "react-github-fork-ribbon",
   "description": "Pure inline style github fork ribbon on React component",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "keywords": [
     "fork",
     "GitHub",
@@ -28,7 +28,8 @@
     "start": "gulp dev",
     "prepublish": "gulp transpile",
     "storybook": "start-storybook -p 8000 -c storybook",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "release": "standard-version"
   },
   "engines": {
     "node": ">=0.10.x"
@@ -63,6 +64,7 @@
     "react-dom": "^16.0.0",
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "^16.0.0",
+    "standard-version": "^4.4.0",
     "storybook-addon-specifications": "^2.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

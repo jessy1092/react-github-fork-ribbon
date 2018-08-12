@@ -1,3 +1,22 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.6.0"></a>
+## [0.6.0](https://github.com/jessy1092/react-github-fork-ribbon/compare/v0.5.1...v0.6.0) (2018-08-12)
+
+
+### Features
+
+* Support for custom class names ([0b5319b](https://github.com/jessy1092/react-github-fork-ribbon/commit/0b5319b))
+
+### Bug Fixes
+
+* add rel="noopener" to anchor ([3bf9999](https://github.com/jessy1092/react-github-fork-ribbon/commit/3bf9999))
+* Make ribbon smoother in Firefox ([0b89e50](https://github.com/jessy1092/react-github-fork-ribbon/commit/0b89e50))
+
+
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/jessy1092/react-github-fork-ribbon/compare/v0.5.0...v0.5.1) (2017-10-05)
 
