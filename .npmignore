@@ -10,3 +10,4 @@ docs/
 
 # Use Transpile file for publish
 src/
+coverage/
