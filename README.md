@@ -4,9 +4,9 @@ React GitHub Fork Ribbon
 
 Pure inline style github fork ribbon on React component. The inline style css is from ["Fork me on GitHub" CSS ribbon](http://simonwhitaker.github.io/github-fork-ribbon-css/).
 
-|         | React = 0.12 | React = 0.13  | React >= 0.14 |
-| ------- | ------------ | ------------- | ------------- |
-| Version | <= 0.2       | >= 0.3 < 0.5  | >= 0.5        |
+|         | React = 0.12 | React = 0.13  | React >= 0.14 | React >= 0.17 |
+| ------- | ------------ | ------------- | ------------- | ------------- |
+| Version | <= 0.2       | >= 0.3 < 0.5  | >= 0.5        | >= 0.7        |
 
 ## Usage
 
